@@ -10,9 +10,9 @@ angular
                 // Load the display component
                 template: "<favorites-page></favorites-page>"
             })
-            .when("/event-list", {
+            .when("/weather-list", {
                 // Load the display component
-            template: "<event-list></event-list>"
+            template: "<weather-list></weather-list>"
             })
-            .otherwise({ redirectTo: "/event-list" });
+            .otherwise({ redirectTo: "/weather-list" });
     }]);
