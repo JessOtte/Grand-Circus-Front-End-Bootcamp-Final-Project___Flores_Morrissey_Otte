@@ -16,6 +16,9 @@ EventService.fetchWeather(id)
 //     ctrl.recipeList.push(recipeObj);
 //   })
 });
+
+
+
 }
 
 
@@ -25,14 +28,30 @@ angular.module('WeatherEventApp')
 
 
 
-    
+    <br>
+    <br>
+    <br>
+    <br>
+
+
 
  
 
-
     <section id="weather-list">
-                    <div ng-repeat="item in $ctrl.weatherData.list">{{item.main.temp}}</div>
+    <div class="weather-container">
+
+                    <div>
+                    <h5>Current Temperature: <span class="data">{{$ctrl.weatherData.main.temp | number:0}} </span></h5> 
+                    </div>
+
+                    <div>
+                    <h5>Current Conditions: <span class="data">{{$ctrl.weatherData.weather["0"].description}} </span></h5>
+                    </div>
+    </div>
     </section>
+
+
+
 
 
 `, // or use templateUrl

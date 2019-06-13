@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module('WeatherEventApp')
-  .component('Favorites', {
+  .component('favorites', {
     template: `
 
 

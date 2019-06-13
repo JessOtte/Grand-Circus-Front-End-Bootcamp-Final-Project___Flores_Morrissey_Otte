@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather  Event App</title>
+    <title>WeatherBrite GR</title>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
     
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -18,7 +18,7 @@
     <nav class="nav-container">
 
         <div>
-                <a class="logo" href="#!/weather-list">Weather Event</a>
+                <a class="logo" href="#!/weather-list">WeatherBrite GR</a>
             </div>
 
         <ul class="nav-items">
@@ -26,11 +26,14 @@
             <li class="nav-item"><a href="#!/favorites-page"><span style="color: rgb(240, 45, 38)">❤</span> Favorites</a></li>
         </ul>
     </nav>
-    <main id="main" ng-view>
-      <weather-list></weather-list>
+    <section id="section" ng-view>
+        <weather-list></weather-list>
+    </section>
 
-      <div class="modal-background"></div>
-    </main>
+    <section>
+        <event-list></event-list>
+    </section>
+
 
     
 
@@ -40,12 +43,12 @@
 
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
-    <!-- <script src="components/favorites-page/favoritesPage.js"></script>
-    <script src="components/event-list/eventList.js"></script>
-    <script src="components/search-criteria/searchCriteria.js"></script> -->
+    <!-- <script src="components/favorites-page/favoritesPage.js"></script> -->
+    <script src="components/weather-list/weatherList.js"></script>
+    <script src="components/event-list/eventList.js"></script> 
+    <!-- <script src="components/search-criteria/searchCriteria.js"></script> -->
     <script src="components/event.service.js"></script>
     <!-- <script src="components/event-details/eventDetails.js"></script> -->
-    <script src="components/weather-list/weatherList.js"></script>
 
 </body>
 

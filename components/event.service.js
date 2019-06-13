@@ -22,14 +22,14 @@ function EventService ($http, $q) {
                 // service.city = city;
                 // service.list = list;
                 $http({
-                    url: `https://api.openweathermap.org/data/2.5/forecast/`,
+                    url: `https://api.openweathermap.org/data/2.5/weather/`,
                     method: `GET`,
                     params: {
                         id: '4994358',
                         cnt: 8,
                         units: 'imperial',
-                        appid: service.appid
-                        // city: service.city.name,
+                        appid: service.appid,
+                        // city: service.city.name
                         // list: service.list.main.temp,
                         // list: service.list.main.rain
                     }
@@ -44,10 +44,11 @@ function EventService ($http, $q) {
             })
         }
     
+       
         
+}
     
-    
-    }
+
     
 
 angular
