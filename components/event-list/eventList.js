@@ -12,6 +12,57 @@ function EventList(EventService, $q) {
     "Charity & Causes",
   ];
 
+    ctrl.grEvents = [
+      {
+      destination:"Frederik Meijer Gardens",
+      rank:'1',
+      googleReview: "4.8",
+      summary: "Colorful gardens filled with art & music",
+      description: "Sprawling botanical gardens with diverse sculptures hosts indoor art exhibits & summer concerts.",
+      },
+      {
+        destination:"John Ball Zoo",
+        rank: "2",
+        googleReview: "4.5",
+        summary: "Interactive zoo with an aquarium",
+        description: "Exhibits include touchable stingrays, feedable parakeets & camel rides, plus aquarium with penguins.",
+        },
+        {
+          destination:"Grand Rapids Public Museum",
+          rank: "3",
+          googleReview: "4.6",
+          summary: "Museum & planetarium in an ex-flour mill",
+          description: "Museum offers 3 floors of history in an ex-flour mill plus exhibits, a 1928 carousel & planetarium",
+          },
+          {
+            destination:"Grand Rapids Art Museum",
+            rank: "4",
+            googleReview: "4.5",
+            summary: "Mod space for 19th- & 20th-century art",
+            description: "Modern space filled with U.S. & European art offers family-friendly activities & classical concerts.",
+            },
+            {
+              destination:"The Gerald Ford Presidential Museum",
+              rank: "5",
+              googleReview: "4.6",
+              summary: "Interactive exhibits on president's life",
+              description: "Museum tells Ford's life story using artifacts, interactive exhibits & a replica of the Oval Office.",
+              },
+   ];
+
+
+   console.log(ctrl.grEvents);
+
+
+
+
+
+
+
+
+
+
+
   EventService.fetchEvents()
   .then((response) => {
       ctrl.eventData = response;
@@ -57,49 +108,40 @@ function EventList(EventService, $q) {
    
        });
       }
+
+      ctrl.callEventDetails = (event) => {
+        ctrl.showDetailModule = true;
+        EventService.setDetails(event)
+      }
     
     }
 
 angular.module('WeatherEventApp')
   .component('eventList', {
     template: `
-<section id="event-list" >
+<section id="event-list">
+
 <div id="filter">
 <h1>Filter Events you're interested in based on the current temperature in Grand Rapids, MI</h1>
-
-<div> 
-
-
-<select ng-model="category" class="custom-select" style="width:200px;">
-<option value="" selected="selected">Category</option>
-<option ng-repeat="category in $ctrl.eventData.events">{{category.sub_category}}</option>
-</select>
-
-<select ng-model="price" class="custom-select" style="width:200px;">
-    <option value="" selected="selected">Price</option>
-    <option value="free">Free</option>
-    <option value="paid">Paid</option>
-</select>
 </div>
 
-</div>
-
-<div>
-</div>
-
-
-<div>
 
 <div id="box" ng-repeat="item in $ctrl.eventData.events">
 <h3>{{item.name.text}}</h3>
 <p>{{item.summary}}</p>
-
+<button class="btn btn-primary" ng-click="$ctrl.callEventDetails(event)">Event Details</button>
 </div>
 
 
+<div id="box" ng-repeat="item in $ctrl.grEvents">
+<h3>{{item.destination}}</h3>
+<p>{{item.summary}}</p>
 </div>
 
-    </div>
+
+
+
+
     </section>
 
 `, // or use templateUrl

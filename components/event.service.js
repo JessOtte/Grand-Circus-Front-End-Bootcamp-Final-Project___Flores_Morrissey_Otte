@@ -1,6 +1,8 @@
 function EventService ($http, $q) {
         const service = this;
 
+        service.eventDetails = null;
+
     
         service.appid = "016e00dbb08bcaf3c211004b0312d013";
 
@@ -61,6 +63,14 @@ function EventService ($http, $q) {
                         reject(error);
                     })
             })
+        }
+
+        service.setDetails = (recipe) => {
+            service.eventDetails = recipe;
+        }
+
+        service.getDetails = () => {
+            return service.eventDetails;
         }
     
        

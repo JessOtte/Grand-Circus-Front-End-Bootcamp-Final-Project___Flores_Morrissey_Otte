@@ -6,9 +6,9 @@ angular
     .config(["$routeProvider", ($routeProvider) => {
         $routeProvider
             // When the user visits the display route...
-            .when("/favorites-page", {
+            .when("/event-details", {
                 // Load the display component
-                template: "<favorites-page></favorites-page>"
+                template: "<event-details></event-details>"
             })
             .when("/weather-list", {
                 // Load the display component
