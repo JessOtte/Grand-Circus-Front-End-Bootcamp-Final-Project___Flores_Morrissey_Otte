@@ -1,18 +1,10 @@
 function EventService ($http, $q) {
         const service = this;
-        // service.favoriteList = [];
-        // service.eventDetails = null;
+
     
         service.appid = "016e00dbb08bcaf3c211004b0312d013";
-        // service.APP_ID = "130a79d6";
-    
-    
-        // service.input = null;
 
-        // service.city = null;
-        // service.list = null;
 
-        // service.recipeList = [];
 
         service.fetchWeather = () => {
     
@@ -33,6 +25,33 @@ function EventService ($http, $q) {
                         // list: service.list.main.temp,
                         // list: service.list.main.rain
                     }
+                })
+                    .then((response) => {
+                        let data = response.data;
+                        resolve(data);
+                    })
+                    .catch((error) => {
+                        reject(error);
+                    })
+            })
+        }
+
+  
+
+        // let events_toekn = IYBEWZZEFXT3EA6JODBG; 
+
+        service.fetchEvents = () => {
+    
+    
+            return $q(function (resolve, reject) {
+               
+                $http({
+                    url: `https://www.eventbriteapi.com/v3/events/search/?q=grand+rapids%2C+mi&start_date.keyword=today&token=IYBEWZZEFXT3EA6JODBG`,
+                    method: `GET`
+                    // params: {
+                    //     categories: '103' // example - music category 
+                      
+                    // }
                 })
                     .then((response) => {
                         let data = response.data;
