@@ -6,7 +6,7 @@ EventService.fetchWeather(id)
 .then((response) => {
     ctrl.weatherData = response;
 
-  console.log(ctrl.weatherData);
+  // console.log(ctrl.weatherData);
   
 //   weatherData.forEach(function (id) {
 //     let recipeObj = {
@@ -59,3 +59,9 @@ angular.module('WeatherEventApp')
 
 
   });
+
+
+
+
+
+

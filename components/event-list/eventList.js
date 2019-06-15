@@ -1,7 +1,9 @@
 function EventList(EventService, $q) {
   const ctrl = this;
 
+  ctrl.meetupData = [];
   ctrl.eventData = [];
+
 
   ctrl.names = [
     "Music", 
@@ -56,6 +58,13 @@ function EventList(EventService, $q) {
 
 
 
+  //  EventService.getMeetupEvents()
+  //  .then((response) => {
+  //      ctrl.meetupData = response;
+
+  //      console.log(ctrl.meetupData);
+   
+  //  });
 
 
 
@@ -78,31 +87,6 @@ function EventList(EventService, $q) {
       EventService.fetchEvents()
       .then ( (response) => {
         console.log(response);
-          // do something with this data
-          // attach to template one by one
-  
-          // Get children from data
-          // let children = response.data.data.children;
-  
-          // Same as 
-          //  <ng-repeat="child in children">
-  
-          // Organize in to objects for each one
-            // children.forEach( function(child, index) {
-            //   let childObj = {
-            //     title: child.data.title,
-            //     img: child.data.thumbnail,
-            //     permalink: child.data.permalink
-            //   }
-  
-              // Add to feed array
-              // ctrl.feed.push(childObj);
-  
-              // if ( index === (children.length -1) ){
-              //   // Run .then() from inside caller
-              //   resolve();
-              // }
-  
   
             })
    
@@ -126,10 +110,12 @@ angular.module('WeatherEventApp')
 </div>
 
 
+
 <div id="box" ng-repeat="item in $ctrl.eventData.events">
 <h3>{{item.name.text}}</h3>
 <p>{{item.summary}}</p>
-<button class="btn btn-primary" ng-click="$ctrl.callEventDetails(event)">Event Details</button>
+<a class="btn btn-primary" href="#!/event-details">Event Details</a>
+<!-- <button class="btn btn-primary" ng-click="$ctrl.callEventDetails(event)">Event Details</button> -->
 </div>
 
 
@@ -137,6 +123,12 @@ angular.module('WeatherEventApp')
 <h3>{{item.destination}}</h3>
 <p>{{item.summary}}</p>
 </div>
+
+<!--
+<div id="box" ng-repeat="item in $ctrl.meetupData">
+<h3>{{item.events.name}}</h3>
+</div>
+-->
 
 
 

@@ -8,22 +8,8 @@
         
         console.log(`Is it working: ${EventService.fetchEvents}`);
         
-        const ctrl = this;
-        ctrl.search = "";
-        ctrl.favs = null;
 
-        ctrl.favs = EventService.getFavorites();
-        console.log(`favs:`)
 
-        ctrl.removeRecipe = function (key, value) {
-            ctrl.favs.splice(key, 1)
-        }
-
-        ctrl.callRecipeDetails = (recipe) => {
-            // console.log(recipe);
-            ctrl.showDetailModule = true;
-            EventService.setDetails(recipe)
-        }
 
     }],
     template: `
