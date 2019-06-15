@@ -5,7 +5,7 @@ function SearchCriteria (EventService) {
 }
 
 angular.module("WeatherEventApp")
-.component("SearchCriteria", {
+.component("searchCriteria", {
     template: `
 
     
