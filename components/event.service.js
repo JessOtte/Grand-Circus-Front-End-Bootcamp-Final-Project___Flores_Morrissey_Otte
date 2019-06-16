@@ -38,6 +38,32 @@ function EventService ($http, $q) {
             })
         }
 
+        service.fetchForecast = () => {
+
+
+            return $q(function (resolve, reject) {
+
+               $http({
+                   url: `https://api.openweathermap.org/data/2.5/forecast/`,
+                   method: `GET`,
+                   params: {
+                       id: '4994358',
+                       cnt: 8,
+                       units: 'imperial',
+                       appid: service.appid
+
+                   }
+               })
+                   .then((response) => {
+                       let data = response.data;
+                       resolve(data);
+                   })
+                   .catch((error) => {
+                       reject(error);
+                   })
+           })
+       }
+
   
         // let events_tokken = IYBEWZZEFXT3EA6JODBG; 
 
