@@ -1,8 +1,13 @@
 function EventList(EventService, $q) {
   const ctrl = this;
 
+  ctrl.showDetailModule = false;
+
+
   ctrl.meetupData = [];
   ctrl.eventData = [];
+  ctrl.eventList = [];
+
 
 
   ctrl.names = [
@@ -97,12 +102,26 @@ function EventList(EventService, $q) {
         ctrl.showDetailModule = true;
         EventService.setDetails(event)
       }
+
+      $(document).ready(function(){
+        $("#hide").click(function(){
+          $("p").hide();
+        });
+        $("#show").click(function(){
+          $("p").show();
+        });
+      });
     
     }
 
 angular.module('WeatherEventApp')
   .component('eventList', {
     template: `
+
+    <section id="section" ng-view>
+    <weather-list></weather-list>
+</section>
+
 <section id="event-list">
 
 <div id="filter">
@@ -111,17 +130,22 @@ angular.module('WeatherEventApp')
 
 
 
-<div id="box" ng-repeat="item in $ctrl.eventData.events">
+<div id="box2" ng-repeat="item in $ctrl.eventData.events">
 <h3>{{item.name.text}}</h3>
 <p>{{item.summary}}</p>
-<a class="btn btn-primary" href="#!/event-details">Event Details</a>
-<!-- <button class="btn btn-primary" ng-click="$ctrl.callEventDetails(event)">Event Details</button> -->
+<a id="hide" class="btn btn-primary" href="#!/event-details">Event Details</a>
+<!-- <button id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(event)" href="#!/event-details">Event Details</button> --> 
 </div>
 
 
-<div id="box" ng-repeat="item in $ctrl.grEvents">
-<h3>{{item.destination}}</h3>
-<p>{{item.summary}}</p>
+
+
+<div class="carousel-item" ng-repeat="item in $ctrl.grEvents">
+  <img src="..." alt="...">
+  <div class="carousel-caption d-none d-md-block">
+  <h3>{{item.destination}}</h3>
+  <p>{{item.summary}}</p>
+  </div>
 </div>
 
 <!--

@@ -40,6 +40,7 @@ angular.module('WeatherEventApp')
     <section id="weather-list">
     <div class="weather-container">
 
+    <!--
                     <div>
                     <h5>Current Temperature: <span class="data">{{$ctrl.weatherData.main.temp | number:0}} </span></h5> 
                     </div>
@@ -47,6 +48,27 @@ angular.module('WeatherEventApp')
                     <div>
                     <h5>Current Conditions: <span class="data">{{$ctrl.weatherData.weather["0"].description}} </span></h5>
                     </div>
+
+                    -->
+
+
+
+
+
+
+
+                    <div>
+                    <h5>Current Temperature: <span class="data">69 </span></h5> 
+                    </div>
+
+                    <div>
+                    <h5>Current Conditions: <span class="data">overcast </span></h5>
+                    </div>
+
+
+
+
+
     </div>
     </section>
 

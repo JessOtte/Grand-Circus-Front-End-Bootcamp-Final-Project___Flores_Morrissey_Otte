@@ -18,7 +18,7 @@
     <nav class="nav-container">
 
         <div>
-                <a class="logo" href="#!/weather-list">WeatherBrite GR</a>
+                <a id="show" class="logo" href="#!/weather-list">WeatherBrite GR</a>
             </div>
 
         <ul class="nav-items">
@@ -26,9 +26,7 @@
             <li class="nav-item"><a href="#!/event-details"><span style="color: rgb(240, 45, 38)">❤</span> Favorites</a></li>
         </ul>
     </nav>
-    <section id="section" ng-view>
-        <weather-list></weather-list>
-    </section>
+
 
     <section>
         <event-list></event-list>
@@ -43,13 +41,15 @@
 
     <script src="app.module.js"></script>
     <script src="app.config.js"></script>
-    <!-- <script src="components/favorites-page/favoritesPage.js"></script> -->
+
+    <script src="components/event.service.js"></script>
     <script src="components/weather-list/weatherList.js"></script>
     <script src="components/event-list/eventList.js"></script> 
-    <!-- <script src="components/search-criteria/searchCriteria.js"></script> -->
-    <script src="components/event.service.js"></script>
-    <!-- <script src="components/event-details/eventDetails.js"></script> -->
-
+    <script src="components/event-details/eventDetails.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

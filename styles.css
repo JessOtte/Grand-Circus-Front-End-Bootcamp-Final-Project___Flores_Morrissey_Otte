@@ -1,5 +1,10 @@
+
+
+
+
 * {
     box-sizing: border-box;
+    margin: 0;
     }
 
 html, body {
@@ -38,7 +43,7 @@ a:visited {
 .nav-container {
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: #17252A;
     padding: 5px 20px;
     position: fixed;
     z-index: 999;
@@ -93,16 +98,12 @@ a:visited {
 
 #box {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    border: 2px rgb(48, 48, 48) solid;
     margin: 10px;
     padding: 15px;
-    width: 50vw;
-    -webkit-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
-    -moz-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
-    box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
+    margin-bottom: 40px;
 }
 
 
@@ -157,14 +158,14 @@ a:visited {
   
   .btn-primary {
     color: #fff;
-    background-color: #99C24D;
-    border-color: #99C24D;
+    background-color: #2B7A78;
+    border-color: #2B7A78;
   }
   
   .btn-primary:hover {
     color: #fff;
-    background-color: rgb(86, 122, 18);
-    border-color: rgb(86, 122, 18);
+    background-color: #3AAFA9;
+    border-color: #3AAFA9;
   }
 
   .btn-primary:visited {
@@ -175,25 +176,25 @@ a:visited {
 
   
   .btn-primary:focus, .btn-primary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(86, 122, 18, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(23, 37, 42, 0.5);
   }
   
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #99C24D;
-    border-color: #99C24D;
+    background-color: #2B7A78;
+    border-color: #2B7A78;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #99C24D;
-    border-color: #99C24D;
+    background-color: #2B7A78;
+    border-color: #2B7A78;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
   .show > .btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(86, 122, 18, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(23, 37, 42, 0.5);
   }
 
   /* BUTTON STYLING OVER */
@@ -213,4 +214,110 @@ a:visited {
     overflow-y: scroll;
     margin-left: 30%;
     top: 10vh;
+}
+
+.card-img-top {
+  border-top-left-radius: calc(0.5rem - 3px);
+  border-top-right-radius: calc(0.5rem - 3px);
+}
+
+.event-details-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#text-center {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#event-details-colored-box {
+  padding: 20vh;
+  background: #3AAFA9;
+  background-clip: border-box;  
+  width: 100vw;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.event-details-title {
+  color: #17252A;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 1px;
+  letter-spacing: 1px;
+}
+
+.event-details-paragraph {
+  padding: 10px 95px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.event-details-img {
+  border: solid #17252A 20px;
+  margin-left: 60px;
+  flex: 4;
+}
+
+.go-back-btn-container {
+  width: 100vw;
+  position: absolute;
+  top: 6vh;
+  left: 3vw;
+}
+.back-btn-img {
+  width: 6%;
+
+}
+.event-details-city-and-start-date {
+  /* width: 55vw; */
+  height: 20vh;
+  margin: 50px;
+  font-size: 20px;
+  flex: 1;
+}
+
+.event-details-body {
+  width: 100%;
+}
+#purchase-tickets {
+  margin-top: 40px;}
+
+  .margin-left {
+    margin-left: 30px;
+}
+.city {
+  /* font-weight: 500; */
+  font-size: 16px;
+  color: white;
+}
+.date-time {
+  font-size: 14px;
+  color: white;
+}
+
+#box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px rgb(48, 48, 48) solid;
+  margin: 10px;
+  padding: 15px;
+  width: 50vw;
+  -webkit-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
+  -moz-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
+  box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
 }
