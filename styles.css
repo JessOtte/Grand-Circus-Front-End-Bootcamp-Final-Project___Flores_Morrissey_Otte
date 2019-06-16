@@ -41,33 +41,37 @@ a:visited {
 
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #17252A;
-    padding: 5px 20px;
-    position: fixed;
-    z-index: 999;
-    width: 100vw;
-  }
+  display: flex;
+  justify-content: space-between;
+  background-color:#17252A;
+  padding: 5px 20px;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+}
 
   .container {
     margin: 50px;
   }
 
-.logo {
+  .logo {
     font-size: 20px;
     font-weight: 900;
-    color: #2E4057;
+    color: #3AA;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-family: 'Pacifico'; 
 }
 
 .nav-items {
-    display: flex;
-    justify-content: flex-end;
-    align-content: space-around;
-    list-style-type: none;
-    letter-spacing: normal;
-    color: #2E4057;
-    font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  list-style-type: none;
+  letter-spacing: normal;
+  color: #2E4057;
+  font-size: 20px;
 }
 
 .nav-item > a {
@@ -81,9 +85,11 @@ a:visited {
 }
 
 .weather-container {
-    border-bottom: black solid 2px;
-    padding: 20px;
-
+  border-bottom: black solid 2px;
+  padding: 20px;
+  background-color: #3AAFA9;
+  align-content: center;
+  align-items: center;
 
 }
 
@@ -320,4 +326,21 @@ a:visited {
   -webkit-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   -moz-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
+}
+
+h6 {
+  text-align: center;
+  font-family: 'Lato';
+  font-size: 20px; 
+}
+
+.description {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.temp-info {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 30px;
 }

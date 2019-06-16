@@ -26,47 +26,23 @@ angular.module('WeatherEventApp')
   .component('weatherList', {
     template: `
 
-
-
     <br>
-    <br>
-    <br>
-    <br>
-
-
-
- 
 
     <section id="weather-list">
     <div class="weather-container">
 
-    <!--
-                    <div>
+                    <div class = "temp-info">
                     <h5>Current Temperature: <span class="data">{{$ctrl.weatherData.main.temp | number:0}} </span></h5> 
                     </div>
 
-                    <div>
+                    <div class = "description">
                     <h5>Current Conditions: <span class="data">{{$ctrl.weatherData.weather["0"].description}} </span></h5>
                     </div>
 
-                    -->
-
-
-
-
-
-
-
-                    <div>
-                    <h5>Current Temperature: <span class="data">69 </span></h5> 
+                    <div class = "Grand Rapids">
+                    <h6>Grand Rapids, MI </h6>
                     </div>
-
-                    <div>
-                    <h5>Current Conditions: <span class="data">overcast </span></h5>
-                    </div>
-
-
-
+                
 
 
     </div>
