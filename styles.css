@@ -351,11 +351,16 @@ h6 {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-
+#box2 {
+    width: 90vw;
+    border: none;
+  }
   #event-list-logo {
     height: 8vh;
     width: 25vw;
   }
+
+  
   
 
 }

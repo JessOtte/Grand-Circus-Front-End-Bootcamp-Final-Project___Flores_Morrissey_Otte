@@ -125,15 +125,19 @@ angular.module('WeatherEventApp')
 <section id="event-list">
 
 <div id="filter">
-<h1>Filter Events you're interested in based on the current temperature in Grand Rapids, MI</h1>
+<h1>Live your best life</h1>
 </div>
 
 
 
 <div id="box2" ng-repeat="item in $ctrl.eventData.events">
 <h3>{{item.name.text}}</h3>
+
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
+
+
 <p>{{item.summary}}</p>
+
 <a id="hide" class="btn btn-primary" href="#!/event-details">Event Details</a>
 <!-- <button id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(event)" href="#!/event-details">Event Details</button> --> 
 </div>
