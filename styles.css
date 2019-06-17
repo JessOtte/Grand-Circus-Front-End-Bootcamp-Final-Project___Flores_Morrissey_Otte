@@ -88,10 +88,13 @@ a:visited {
 .weather-container {
   border-bottom: black solid 2px;
   padding: 20px;
+  padding-bottom: 350px;
   background-color: #3AAFA9;
   align-content: center;
   align-items: center;
-
+  background-image: url(images/Grand-Rapids.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #weather-list {
