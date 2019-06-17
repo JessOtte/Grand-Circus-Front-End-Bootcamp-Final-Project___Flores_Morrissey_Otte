@@ -23,19 +23,18 @@ angular.module('WeatherEventApp')
     <div class="weather-container">
 
                     <div class = "temp-info">
-                    <h5><span class="data">{{$ctrl.weatherData.main.temp | number:0}}</span>℉</h5> 
+                      <h5><span class="data">{{$ctrl.weatherData.main.temp | number:0}}</span>℉</h5> 
                     </div>
 
                     <div class = "description">
-                    <h5>Currently: <span class="data">{{$ctrl.weatherData.weather["0"].description}}</span></h5>
-                    <span class = "icon">{{$ctrl.weatherData.weather.icon}}</span>
+                      <h5>Currently: <span class="data">{{$ctrl.weatherData.weather["0"].description}}</span></h5>
+                      <span class = "icon">{{$ctrl.weatherData.weather.icon}}</span>
                     </div>
 
                     <div class = "Grand-Rapids">
-                    <h6>Grand Rapids <br> Michigan </h6>
+                      <h6>Grand Rapids <br> Michigan </h6>
                     </div>
                 
-
 
     </div>
     </section>
