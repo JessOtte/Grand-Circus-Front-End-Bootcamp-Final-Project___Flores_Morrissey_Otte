@@ -361,8 +361,9 @@ h6 {
   justify-content: flex-start;
   padding-top: 30px;
 }
-img#event-list-logo {
-  width: 30vw;
+#event-list-logo {
+  width: 20vw;
+
 }
 
 
