@@ -86,27 +86,27 @@ a:visited {
 }
 
 .data {
-    color: red;
+    color: white;
     font-size: 30px;
 }
 
 h5 {
-    color: red;
+    color: white;
     font-size: 30px;
+    text-transform: capitalize;
 }
 
 .weather-container {
-  border-bottom: black solid 2px;
   padding: 20px;
   padding-bottom: 350px;
-  background-color: #3AAFA9;
   align-content: center;
   align-items: center;
-  background-image: url(images/Grand-Rapids.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.8;
+
+
 }
+
+.weather-container{width:100vw;height:100vh;text-align:center;color:#fff;background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+  url("images/Grand-Rapids.jpg");background-size:cover;background-position:center center;background-repeat:no-repeat;background-attachment:fixed}.weather-container h1{font-size:5em;margin-top:0;margin-bottom:.5em}.weather-container .btn{display:block;width:200px;padding:1em;margin-top:50px;margin-left:auto;margin-right:auto;color:#fff;text-decoration:none;font-size:1.5em;border:3px solid #fff;border-radius:20px;background-color:rgba(147,112,219,.8)}
 
 #weather-list {
     color: darkred;
@@ -349,7 +349,7 @@ h5 {
   font-size: 4em;
   font-weight: bolder;
   margin-left: 11%;
-   margin-top: 18%;
+  margin-top: 4%;
 }
 
 
@@ -373,7 +373,7 @@ h6 {
   text-align: center;
   font-family: 'Lato';
   font-size: 80px; 
-  color: red;
+  color: white;
 }
 
 .description {
