@@ -82,6 +82,7 @@ a:visited {
 
 .data {
     color: red;
+    font-size: 30px;
 }
 
 .weather-container {
@@ -360,7 +361,6 @@ h6 {
     width: 25vw;
   }
 
-  
   
 
 }
