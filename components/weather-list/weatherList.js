@@ -25,9 +25,6 @@ EventService.fetchWeather(id)
 angular.module('WeatherEventApp')
   .component('weatherList', {
     template: `
-
-    <br>
-
     <section id="weather-list">
     <div class="weather-container">
 

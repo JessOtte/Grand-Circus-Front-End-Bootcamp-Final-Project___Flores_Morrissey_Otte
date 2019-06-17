@@ -151,6 +151,7 @@ angular.module('WeatherEventApp')
 
 
 
+
     </section>
 
 `, // or use templateUrl
