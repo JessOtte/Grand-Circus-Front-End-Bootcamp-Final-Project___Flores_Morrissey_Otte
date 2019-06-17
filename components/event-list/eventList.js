@@ -73,9 +73,10 @@ angular.module('WeatherEventApp')
 
 <div id= main-box>
 <div id="box2" ng-repeat="item in $ctrl.eventData.events">
+<img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
 <h3>{{item.name.text}}</h3>
 
-<img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
+
 
 
 <p>{{item.summary}}</p>
@@ -87,32 +88,9 @@ angular.module('WeatherEventApp')
 
 
 
-<<<<<<< HEAD
-</div>
-
-
- <!--
- <div class="carousel-item" ng-repeat="item in $ctrl.grEvents">
-  <img src="..." alt="...">
-  <div class="carousel-caption d-none d-md-block">
-  <h3>{{item.destination}}</h3>
-  <p>{{item.summary}}</p>
-  </div>
-</div>
--->
-
-<!--
-<div id="box" ng-repeat="item in $ctrl.meetupData">
-<h3>{{item.events.name}}</h3>
-</div>
--->
-
-
-=======
 <section id="gr-event">
 <gr-events></gr-event>
 </section>
->>>>>>> 9ade8aa65c92e5473cebbca7f16d5747b3feb487
 
 
 

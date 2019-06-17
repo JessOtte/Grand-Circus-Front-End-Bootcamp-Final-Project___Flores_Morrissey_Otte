@@ -324,26 +324,29 @@ a:visited {
 #main-box {
   
  display: flex;
-  flex-direction: row;
-  flex-wrap:wrap;
+ flex-direction: row;
+ flex-wrap:wrap;
+ justify-content: center;
+ margin-top: 18%;
 }
 
 
 
 #box2 {
   display: flex;
-   flex-direction: column; 
-   justify-content: center;
+  flex-direction: column; 
+  justify-content: center;
   align-items: center; 
-  border: 2px rgb(48, 48, 48) solid;
   margin: 10px;
   padding: 15px;
   width: 25vw;
   -webkit-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   -moz-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
-  align-content: flex-start;
+  font-size: 0.9em;
 }
+
+
 
 h6 {
   text-align: center;
