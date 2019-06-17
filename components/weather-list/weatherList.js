@@ -1,6 +1,7 @@
 function WeatherList(EventService) {
     const ctrl = this;
     let id = '4994358';
+    
 
 EventService.fetchWeather(id)
 .then((response) => {
