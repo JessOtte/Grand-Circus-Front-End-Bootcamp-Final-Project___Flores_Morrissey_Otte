@@ -2,7 +2,7 @@ function WeatherForecast(EventService) {
     const ctrl = this;
     let id = '4994358';
 
- EventService.fetchWeather(id)
+ EventService.fetchForecast(id)
 .then((response) => {
     ctrl.weatherData = response;
 
@@ -17,6 +17,15 @@ angular.module('WeatherEventApp')
   .component('weatherForecast', {
     template: `
     <nav class="nav-container">
+
+    <div>
+      <a id="show" class="logo" href="#!/weather-list">WeatherBrite GR</a>
+    </div>
+
+    <ul class="nav-items">
+      <!-- route to favorites -->
+      <li class="nav-item"><a href="#!/event-details"><span style="color: rgb(240, 45, 38)">❤</span> Favorites</a></li>
+    </ul>
 
     <div ng-repeat="item in $ctrl.weatherData.list">{{item.main.temp}}</div>
 
