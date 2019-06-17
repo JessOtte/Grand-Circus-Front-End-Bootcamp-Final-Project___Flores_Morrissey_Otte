@@ -67,7 +67,7 @@ angular.module('WeatherEventApp')
 
 <section id="event-list">
 <div id="filter">
-<h1>Live your best life</h1>
+<h1>Live the dream</h1>
 </div>
 
 

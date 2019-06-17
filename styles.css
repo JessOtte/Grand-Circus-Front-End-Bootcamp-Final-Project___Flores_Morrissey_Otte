@@ -327,9 +327,16 @@ a:visited {
  flex-direction: row;
  flex-wrap:wrap;
  justify-content: center;
- margin-top: 18%;
+
 }
 
+#filter {
+  display: flex;
+  font-size: 4em;
+  font-weight: bolder;
+  margin-left: 11%;
+   margin-top: 18%;
+}
 
 
 #box2 {
@@ -382,7 +389,7 @@ h6 {
     height: 8vh;
     width: 25vw;
   }
-  
+ 
 
 }
 #slider {
