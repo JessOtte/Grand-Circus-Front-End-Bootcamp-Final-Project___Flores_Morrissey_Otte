@@ -87,19 +87,33 @@ a:visited {
 
 .data {
     color: red;
+    font-size: 30px;
+}
+
+h5 {
+    color: red;
+    font-size: 30px;
 }
 
 .weather-container {
   border-bottom: black solid 2px;
   padding: 20px;
+  padding-bottom: 350px;
   background-color: #3AAFA9;
   align-content: center;
   align-items: center;
-
+  background-image: url(images/Grand-Rapids.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 #weather-list {
     color: darkred;
+}
+
+.forecast {
+  color: white;
 }
 
 #filter {
@@ -358,7 +372,8 @@ a:visited {
 h6 {
   text-align: center;
   font-family: 'Lato';
-  font-size: 20px; 
+  font-size: 80px; 
+  color: red;
 }
 
 .description {
@@ -398,6 +413,7 @@ h6 {
   margin: 20px auto 0 auto;
   border-radius: 5px;
 }
+  
 
 #slider ul {
   position: relative;
