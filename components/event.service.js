@@ -4,6 +4,7 @@ function EventService ($http, $q) {
         service.eventDetails = null;
         service.appid = "016e00dbb08bcaf3c211004b0312d013";
 
+        // http request to get weather info 
         service.fetchWeather = () => {
             return $q(function (resolve, reject) {
                 $http({
@@ -28,6 +29,7 @@ function EventService ($http, $q) {
 
         service.fetchForecast = () => {
 
+            // http request to get forescat info
 
             return $q(function (resolve, reject) {
 
@@ -53,15 +55,14 @@ function EventService ($http, $q) {
 
         service.fetchEvents = () => {
     
+            // http request to get events info 
     
             return $q(function (resolve, reject) {
                
                 $http({
                     url: `https://www.eventbriteapi.com/v3/events/search/?location.address=49503&location.within=30mi&start_date.keyword=this_weekend&token=IYBEWZZEFXT3EA6JODBG`,
                     method: `GET`
-                    //  params: {
-                    //      cnt:6
-                    //  }
+                    
                 })
                     .then((response) => {
                         let data = response.data;
