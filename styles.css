@@ -1,6 +1,11 @@
 
 
-
+a, article, body, div, fieldset, figcaption, figure, footer, form, header, h1, 
+h2, h3, img, input, label, legend, li, nav, p, section, textarea, ul {
+   border: 0;
+   padding: 0;
+   margin: 0;
+}
 
 * {
     box-sizing: border-box;
@@ -312,20 +317,32 @@ a:visited {
 .date-time {
   font-size: 14px;
   color: white;
+
 }
+
+
+#main-box {
+  
+ display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+}
+
+
 
 #box2 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+   flex-direction: column; 
+   justify-content: center;
+  align-items: center; 
   border: 2px rgb(48, 48, 48) solid;
   margin: 10px;
   padding: 15px;
-  width: 50vw;
+  width: 25vw;
   -webkit-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   -moz-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
+  align-content: flex-start;
 }
 
 h6 {

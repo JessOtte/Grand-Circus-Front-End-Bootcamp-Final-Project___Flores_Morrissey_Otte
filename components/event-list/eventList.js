@@ -129,7 +129,7 @@ angular.module('WeatherEventApp')
 </div>
 
 
-
+<div id= main-box>
 <div id="box2" ng-repeat="item in $ctrl.eventData.events">
 <h3>{{item.name.text}}</h3>
 
@@ -143,6 +143,9 @@ angular.module('WeatherEventApp')
 </div>
 
 
+
+
+</div>
 
 
  <!--
