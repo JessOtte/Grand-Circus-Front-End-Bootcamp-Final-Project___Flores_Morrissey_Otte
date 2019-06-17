@@ -12,6 +12,7 @@ console.log(true);
 }
 )};
 
+//   <div ng-repeat = "item in $ctrl.weatherData.list">{{item.weather['0']}}</div>
 
 angular.module('WeatherEventApp')
   .component('weatherForecast', {
@@ -26,8 +27,9 @@ angular.module('WeatherEventApp')
       <!-- route to favorites -->
       <li class="nav-item"><a href="#!/event-details"><span style="color: rgb(240, 45, 38)">❤</span> Favorites</a></li>
     </ul>
-
-    <div ng-repeat="item in $ctrl.weatherData.list">{{item.main.temp}}</div>
+    <span class = "forecast">Extended Forecast: </span>
+    <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">{{item.main.temp}}</div>
+  
 
     </nav>
 

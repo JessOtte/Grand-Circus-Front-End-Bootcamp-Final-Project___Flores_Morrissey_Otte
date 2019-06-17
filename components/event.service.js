@@ -23,7 +23,7 @@ function EventService ($http, $q) {
                         cnt: 8,
                         units: 'imperial',
                         appid: service.appid,
-                        icon: 'http://openweathermap.org/img/w/10d.png' //adjust 10d - make dynamic variable 
+                        // icon: 'http://openweathermap.org/img/w/' //displays the number of the .png file - no image yet 
                         // city: service.city.name
                         // list: service.list.main.temp,
                         // list: service.list.main.rain

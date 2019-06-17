@@ -107,6 +107,10 @@ h5 {
     color: darkred;
 }
 
+.forecast {
+  color: white;
+}
+
 #filter {
     text-align: center;    
 
