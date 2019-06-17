@@ -28,7 +28,8 @@ angular.module('WeatherEventApp')
 
                     <div class = "description">
                       <h5>Currently: <span class="data">{{$ctrl.weatherData.weather["0"].description}}</span></h5>
-                      <span class = "icon">{{$ctrl.weatherData.weather.icon}}</span>
+                      <br>
+                      <span class = "icon">{{$ctrl.weatherData.weather["0"].icon}}</span>
                     </div>
 
                     <div class = "Grand-Rapids">

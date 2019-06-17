@@ -1,7 +1,7 @@
 function WeatherForecast(EventService) {
     const ctrl = this;
     let id = '4994358';
-
+console.log(true);
  EventService.fetchForecast(id)
 .then((response) => {
     ctrl.weatherData = response;
