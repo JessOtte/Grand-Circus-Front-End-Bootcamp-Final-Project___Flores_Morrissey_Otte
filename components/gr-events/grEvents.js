@@ -10,7 +10,7 @@ function GrEvents(EventService, $q) {
 	        summary: "Colorful gardens filled with art & music",
 	        description: "Sprawling botanical gardens with diverse sculptures hosts indoor art exhibits & summer concerts.",
 	        website: "https://www.meijergardens.org/",
-	        img:"https://lh4.googleusercontent.com/proxy/IJV4WOlfPCVosUo51_WuMMJPJik-JUqnbweZjyza7tjDxwmxl8nWk-5vqgE8XIKBSI13D6WQDSZgZcx5lLFmETTwAiZkA7u9Wm29SzMC036eAp4-l988lO4kDfSFdGtqdlW-x0PfHqsl9-bSo-0X2RlMWxM=w100-h134-n-k-no",
+	        img:"https://media.wzzm13.com/assets/WZZM/images/43c8ba3c-511c-4833-b847-326811170009/43c8ba3c-511c-4833-b847-326811170009_750x422.png",
 	        },
 	        {
 	          destination:"John Ball Zoo",
@@ -19,7 +19,7 @@ function GrEvents(EventService, $q) {
 	          summary: "Interactive zoo with an aquarium",
 	          description: "Exhibits include touchable stingrays, feedable parakeets & camel rides, plus aquarium with penguins.",
 	          website: "https://www.jbzoo.org/",
-	          img: "https://lh5.googleusercontent.com/proxy/l0TEbxpn3LmLjU45vg8hpiTGW5m_bZQaPR1PDPdv5bKIBDkU_uqaqjfxgGgVaWjDiAsFkZKT3GCt0tJBdF8yQOfT-d6-Eu82YoUiSo-_q0o0YsUtEgCLMBRpp-6AnxsjZIAjJHmZ-L25TECaruz8WVSBbio=w100-h134-n-k-no",
+	          img: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjjhp7N7PHiAhVIJt8KHccfA6cQjRx6BAgBEAU&url=https%3A%2F%2Fwww.woodtv.com%2Fnews%2Fgrand-rapids%2Fkids-can-go-to-john-ball-zoo-free-on-fridays%2F&psig=AOvVaw3L7h2Vz-5XmtMIxpmlm99h&ust=1560906660834161",
 	          },
 	          {
 	            destination:"Grand Rapids Public Museum",
@@ -28,7 +28,7 @@ function GrEvents(EventService, $q) {
 	            summary: "Museum & planetarium in an ex-flour mill",
 	            description: "Museum offers 3 floors of history in an ex-flour mill plus exhibits, a 1928 carousel & planetarium",
 	            website: "https://www.grpm.org/",
-	            img: "https://lh5.googleusercontent.com/proxy/UDu0oHtDiNVOX9yUHbmd3_Z4U1cVpdB4mMlT4Ud-5RIaa570xYnbwYdEZ9-wu5rfdDKXpyhXDLTwuwXivAX3ggMOjdKXmjlxm1q1xXU8-Pu3RUZsy-Qfs4t4EzrkNEYCCbs4bLbfEkhIwdrCpo8pYa2abBA=w100-h134-n-k-no",
+	            img: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiBl4vo7PHiAhVsUN8KHdCvDowQjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGrand_Rapids_Public_Museum&psig=AOvVaw1B9-pK2fsbMqk9DiRtzsdn&ust=1560906720568089",
 	            },
 	            {
 	              destination:"Grand Rapids Art Museum",
@@ -46,7 +46,7 @@ function GrEvents(EventService, $q) {
 	                summary: "Interactive exhibits on president's life",
 	                description: "Museum tells Ford's life story using artifacts, interactive exhibits & a replica of the Oval Office.",
 	                website: "https://www.fordlibrarymuseum.gov/",
-	                img: "https://lh6.googleusercontent.com/proxy/XMFyda-eUCwnvff9HyvKR_JN-lXduwFO1uoM8fRGaM1cmmFCwizfdE3OhyeNfRRv38zkRMeaWpgdykLqe1SEUTskaXXMuflf63BcjHeYXlGvc9fTjkHNYJJ-hjJg0K1vsimYOptDXwzDDg769pHERg42ftQ=w100-h134-n-k-no",
+	                img: "https://www.fordlibrarymuseum.gov/img/Museum-Education-Center.jpg",
 	                },
 			{
 	                destination:"Millennium Park",
@@ -443,8 +443,8 @@ function GrEvents(EventService, $q) {
 	                googleReview: "4.6",
 	                summary: "Self-guided tour of Breweries in Grand Rapids",
 	                description: "Download the map and enjoy the day exploring Beer City USA",
-	                img: "https://assets.simpleviewcms.com/simpleview/image/upload/v1/clients/grandrapids/ExpGR_2019_Beer_Map_for_Website_bdcb8532-2113-491b-af6b-3c6e42942e57.pdf",
-			website: "https://assets.simpleviewcms.com/simpleview/image/upload/v1/clients/grandrapids/ExpGR_2019_Beer_Map_for_Website_bdcb8532-2113-491b-af6b-3c6e42942e57.pdf",
+	                img: "http://res.cloudinary.com/simpleview/image/upload/v1445225901/clients/grandrapids/ExpGR2015BeerMapsheet_466ae912-4050-43ca-b0b0-732591c4353c.pdf",
+			website: "http://res.cloudinary.com/simpleview/image/upload/v1445225901/clients/grandrapids/ExpGR2015BeerMapsheet_466ae912-4050-43ca-b0b0-732591c4353c.pdf",
 			weather: "",
 	                },
 
@@ -464,7 +464,7 @@ function GrEvents(EventService, $q) {
 	                googleReview: "4.6",
 	                summary: "Adult Arcade",
 	                description: "Family-friendly chain offering a sports-bar-style setting for American food & arcade games.",
-	                img: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiz6arYpPHiAhUCPq0KHTe9CroQjRx6BAgBEAU&url=https%3A%2F%2Fwww.shawmut.com%2Fportfolio%2Fhospitality%2Fcasual-dining%2Fdave-busters-livonia-mi&psig=AOvVaw2_u_bU8FeHSYdo3e0ypkyn&ust=1560887351946216",
+	                img: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiVisCc7PHiAhUoUt8KHeh3CNcQjRx6BAgBEAU&url=https%3A%2F%2Fwww.daveandbusters.com%2Fterms-of-use&psig=AOvVaw1BRG1ZeQ5iZqgGlWuUAz-D&ust=1560906559835745",
 			website: "",
 			weather: "",
 	                },
@@ -562,7 +562,7 @@ function GrEvents(EventService, $q) {
     .component('grEvents', {
       template: `
   
-<section id="gr-events">
+<div id="gr-events">
   
   
   
@@ -591,7 +591,7 @@ function GrEvents(EventService, $q) {
   
   
   
-      </section>
+      </div>
   
   `, // or use templateUrl
       controller: GrEvents,

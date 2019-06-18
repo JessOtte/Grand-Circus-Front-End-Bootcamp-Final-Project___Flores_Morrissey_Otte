@@ -4,58 +4,8 @@ function EventDetails(EventService, $q) {
   ctrl.meetupData = [];
   ctrl.eventData = [];
 
-  // Timestamp method
-new Date(-6106015800000);
-
-  ctrl.names = [
-    "Music", 
-    "Business & Professional", 
-    "Food & Drink",
-    "Community & Culture",
-    "Health & Wellness",
-    "Charity & Causes",
-  ];
-
-    ctrl.grEvents = [
-      {
-      destination:"Frederik Meijer Gardens",
-      rank:'1',
-      googleReview: "4.8",
-      summary: "Colorful gardens filled with art & music",
-      description: "Sprawling botanical gardens with diverse sculptures hosts indoor art exhibits & summer concerts.",
-      },
-      {
-        destination:"John Ball Zoo",
-        rank: "2",
-        googleReview: "4.5",
-        summary: "Interactive zoo with an aquarium",
-        description: "Exhibits include touchable stingrays, feedable parakeets & camel rides, plus aquarium with penguins.",
-        },
-        {
-          destination:"Grand Rapids Public Museum",
-          rank: "3",
-          googleReview: "4.6",
-          summary: "Museum & planetarium in an ex-flour mill",
-          description: "Museum offers 3 floors of history in an ex-flour mill plus exhibits, a 1928 carousel & planetarium",
-          },
-          {
-            destination:"Grand Rapids Art Museum",
-            rank: "4",
-            googleReview: "4.5",
-            summary: "Mod space for 19th- & 20th-century art",
-            description: "Modern space filled with U.S. & European art offers family-friendly activities & classical concerts.",
-            },
-            {
-              destination:"The Gerald Ford Presidential Museum",
-              rank: "5",
-              googleReview: "4.6",
-              summary: "Interactive exhibits on president's life",
-              description: "Museum tells Ford's life story using artifacts, interactive exhibits & a replica of the Oval Office.",
-              },
-   ];
-
-
-   console.log(ctrl.grEvents);
+  ctrl.fullEvent = null;
+  
 
 
 
@@ -77,7 +27,7 @@ new Date(-6106015800000);
   EventService.fetchEvents()
   .then((response) => {
       ctrl.eventData = response;
-  
+      ctrl.fullEvent = EventService.getDetails();
     console.log(ctrl.eventData);
     
   
@@ -96,6 +46,7 @@ new Date(-6106015800000);
       }
 
       ctrl.callEventDetails = (event) => {
+        console.log(event);
         ctrl.showDetailModule = true;
         EventService.setDetails(event)
       }
@@ -107,6 +58,7 @@ new Date(-6106015800000);
         $("#show").click(function(){
           $("#event-list").show();
         });
+
       });
     
     }
@@ -120,13 +72,13 @@ angular.module('WeatherEventApp')
 </div>
 
 <div id="box">
-<img src="{{$ctrl.eventData.events[2].logo.original.url}}" alt="{{$ctrl.eventData.events[2].name.text}}" style="margin-top: 8vh;" class="center event-details-img">
+<img src="{{$ctrl.fullEvent.logo.original.url}}" alt="{{$ctrl.fullEvent.name.text}}" style="margin-top: 8vh;" class="center event-details-img">
 
 <div class="event-details-city-and-start-date">
-<h3 class="event-details-title">{{$ctrl.eventData.events[2].name.text}}</h3>
-<p class="city">{{$ctrl.eventData.location.augmented_location.city}}</p>
-<p class="date-time">{{$ctrl.eventData.events[2].start.local}}</p>
-<a class="btn btn-primary" id="purchase-tickets" href="{{$ctrl.eventData.events[2].url}}">More Details From EventBrite</a>
+<h3 class="event-details-title">{{$ctrl.fullEvent.name.text}}</h3>
+<p class="city">{{$ctrl.fullEvent.augmented_location.city}}</p>
+<p class="date-time">{{$ctrl.fullEvent.start.local}}</p>
+<a class="btn btn-primary" id="purchase-tickets" href="{{$ctrl.fullEvent.url}}">More Details From EventBrite</a>
 
 </div>
 
@@ -134,7 +86,7 @@ angular.module('WeatherEventApp')
 
 <div class="event-details-body">
 <h3 -webkit-text-stroke: .5px; style="text-align: center;">ABOUT THIS EVENT</h3>
-<p class="event-details-paragraph">{{$ctrl.eventData.events[2].description.text}}</p>
+<p class="event-details-paragraph">{{$ctrl.fullEvent.description.text}}</p>
 </div>
 
 
@@ -156,7 +108,9 @@ angular.module('WeatherEventApp')
 
 `, // or use templateUrl
     controller: EventDetails,
-
+    bindings: {
+      item: '='
+    }
 
   });
 
