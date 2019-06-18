@@ -58,9 +58,11 @@ angular.module('WeatherEventApp')
 <div id= main-box>
 
 <div id="box2" ng-repeat="item in $ctrl.eventData.events">
+
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
-<h3>{{item.name.text}}</h3>
-<p>{{item.summary}}</p>
+
+<h3 id:"title-name" >{{item.name.text}}</h3>
+<p id= "summary">{{item.summary}}</p>
 <a id="hide" class="btn btn-primary" href="#!/event-details">Event Details</a>
 <!-- <button id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(event)" href="#!/event-details">Event Details</button> --> 
 </div>
