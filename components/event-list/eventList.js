@@ -6,6 +6,13 @@ function EventList(EventService, $q) {
   ctrl.eventData = [];
   ctrl.eventList = [];
   
+  ctrl.eventLimit = 6; 
+
+  ctrl.seeMore =() =>{ 
+    ctrl.eventLimit += 6;
+        };
+
+
   EventService.fetchEvents()
   .then((response) => {
       ctrl.eventData = response;
@@ -57,7 +64,7 @@ angular.module('WeatherEventApp')
 
 <div id= main-box>
 
-<div id="box2" ng-repeat="item in $ctrl.eventData.events">
+<div id="box2" ng-repeat="item in $ctrl.eventData.events |limitTo: $ctrl.eventLimit">
 
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
 
@@ -66,6 +73,8 @@ angular.module('WeatherEventApp')
 <a id="hide" class="btn btn-primary" href="#!/event-details">Event Details</a>
 <!-- <button id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(event)" href="#!/event-details">Event Details</button> --> 
 </div>
+
+<a id="hide" class="btn btn-primary" ng-click= $ctrl.seeMore()>See more</a>
 
 <section id="gr-event">
 <gr-events></gr-event>

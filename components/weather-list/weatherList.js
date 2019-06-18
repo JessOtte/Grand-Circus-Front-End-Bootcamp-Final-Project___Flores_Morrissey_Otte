@@ -31,7 +31,7 @@ angular.module('WeatherEventApp')
                     </div>
 
                     <div class = "Grand-Rapids">
-                      <h6>Grand Rapids <br> Michigan </h6>
+                      <h6>Grand Rapids - Michigan </h6>
                     </div>
                 
 

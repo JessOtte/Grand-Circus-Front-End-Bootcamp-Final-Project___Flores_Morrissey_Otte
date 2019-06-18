@@ -327,6 +327,7 @@ h5 {
   /* font-weight: 500; */
   font-size: 16px;
   color: white;
+  
 }
 .date-time {
   font-size: 14px;
@@ -346,10 +347,10 @@ h5 {
 
 #filter {
   display: flex;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: bolder;
   margin-left: 35%;
-   margin-top: 4%;
+  margin-top: 4%;
 }
 
 
