@@ -17,9 +17,8 @@ EventService.fetchWeather(id)
 angular.module('WeatherEventApp')
   .component('weatherList', {
     template: `
-    <section id="weather-list">
-    <div class="weather-container">
-
+    <div id="weather-list">
+        <div class="weather-container">
                     <div class = "temp-info">
                       <h5><span class="data">{{$ctrl.weatherData.main.temp | number:0}}</span>℉</h5> 
                     </div>
@@ -33,10 +32,13 @@ angular.module('WeatherEventApp')
                     <div class = "Grand-Rapids">
                       <h6>Grand Rapids - Michigan </h6>
                     </div>
-                
-
+        </div>
     </div>
-    </section>
+
+    <event-list></event-list>
+    <gr-events></gr-events>
+
+
 
 
 

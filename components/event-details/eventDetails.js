@@ -5,6 +5,8 @@ function EventDetails(EventService, $q) {
   ctrl.eventData = [];
 
   ctrl.fullEvent = null;
+  ctrl.fullEvent = EventService.getDetails();
+
   
 
 
@@ -24,21 +26,21 @@ function EventDetails(EventService, $q) {
 
 
 
-  EventService.fetchEvents()
-  .then((response) => {
-      ctrl.eventData = response;
-      ctrl.fullEvent = EventService.getDetails();
-    console.log(ctrl.eventData);
+  // EventService.fetchEvents()
+  // .then((response) => {
+  //     ctrl.eventData = response;
+  //     ctrl.fullEvent = EventService.getDetails();
+  //   console.log('Logging all the events today ==>', ctrl.eventData);
     
   
-  });
+  // });
 
   ctrl.fetchEvents = () => {
     return $q(function(resolve, reject) {
       // Call service, then set our data
       EventService.fetchEvents()
       .then ( (response) => {
-        console.log(response);
+        console.log('I am fetching the event the user selected ==>',response);
   
             })
    
@@ -46,7 +48,7 @@ function EventDetails(EventService, $q) {
       }
 
       ctrl.callEventDetails = (event) => {
-        console.log(event);
+        console.log('NO I AM !!!! I am fetching the event the user selected ==>',event);
         ctrl.showDetailModule = true;
         EventService.setDetails(event)
       }
@@ -66,7 +68,7 @@ function EventDetails(EventService, $q) {
 angular.module('WeatherEventApp')
   .component('eventDetails', {
     template: `
-<section id="event-details text-center" class="event-details-container">
+<div id="event-details text-center" class="event-details-container">
 
 <div id="event-details-colored-box">
 </div>
@@ -91,7 +93,7 @@ angular.module('WeatherEventApp')
 
 
 <div class="go-back-btn-container">
-<a id="show" href="#!/event-list"><img src="./images/back-arrow-icon.png" alt="back to event results button" class="back-btn-img"></a>
+<a id="show" href="#!/event-list#event-results"><img src="./images/back-arrow-icon.png" alt="back to event results button" class="back-btn-img"></a>
 </div>
 
 
@@ -104,7 +106,7 @@ angular.module('WeatherEventApp')
 
 
 
-    </section>
+    </div>
 
 `, // or use templateUrl
     controller: EventDetails,

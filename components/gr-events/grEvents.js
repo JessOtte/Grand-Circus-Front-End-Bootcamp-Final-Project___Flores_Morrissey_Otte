@@ -497,14 +497,15 @@ function GrEvents(EventService, $q) {
 	                img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEQg28gMd5Q_-jn-n3V9LBLZYSfRhea8wpN0krDfcozJQJfOGr",
 			website: "http://jesterscourt.com/",
 			weather: "",
-	                },
+					},
+
 ];
   
   
-     console.log(ctrl.grEvents);
   
 
         jQuery(document).ready(function ($) {
+			console.log("I am loading the top 50 events in GR", ctrl.grEvents);
   
           $('#checkbox').change(function(){
             setInterval(function () {
@@ -567,7 +568,7 @@ function GrEvents(EventService, $q) {
   
   
   <h3 class="gr-events-title">Top 50 Things to Do in Grand Rapids</h3>
-  <div id="slider" style="width: 100%">
+  <div id="slider">
     <a href="#" class="control_next">></a>
     <a href="#" class="control_prev"><</a>
     <ul>

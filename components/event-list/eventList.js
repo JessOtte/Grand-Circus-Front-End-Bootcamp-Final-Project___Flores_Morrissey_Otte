@@ -15,9 +15,7 @@ function EventList(EventService, $q) {
 
   EventService.fetchEvents()
   .then((response) => {
-      ctrl.eventData = response;
-    console.log(ctrl.eventData);   
-  
+      ctrl.eventData = response;  
   });
 
   ctrl.fetchEvents = () => {
@@ -32,7 +30,7 @@ function EventList(EventService, $q) {
       }
 
       ctrl.callEventDetails = (event) => {
-        console.log(event);
+        console.log('I am fetching the event THE USER selected ==>', event);
         EventService.setDetails(event)
       }
 
@@ -54,11 +52,9 @@ angular.module('WeatherEventApp')
   .component('eventList', {
     template: `
 
-    <div id="section" ng-view>
-    <weather-list></weather-list>
-</div>
 
-<div id="event-list show hide">
+<div id="event-results">
+<br><br>
 
 <div id="filter">
 <h1>Live the dream</h1>
@@ -67,14 +63,14 @@ angular.module('WeatherEventApp')
 
 <div id= main-box>
 
-<div id="box2" ng-repeat="item in $ctrl.eventData.events |limitTo: $ctrl.eventLimit">
+<div id="box2" ng-repeat="item in $ctrl.eventData.events | limitTo: $ctrl.eventLimit">
 
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
 <h3 class="event-list-name">{{item.name.text}}</h3>
 
 <p class="event-list-name">{{item.summary}}</p>
 
-<a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)" href="#!/event-details">Event Details</a> 
+<a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)" href="#!/event-details" name="top">Event Details</a> 
  </div>
 
  <br><br>

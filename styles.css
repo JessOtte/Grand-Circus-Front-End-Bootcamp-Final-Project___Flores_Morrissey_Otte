@@ -327,7 +327,6 @@ h5 {
   /* font-weight: 500; */
   font-size: 16px;
   color: white;
-  
 }
 .date-time {
   font-size: 14px;
@@ -454,9 +453,6 @@ h6 {
   background: #ccc;
   text-align: center;
   line-height: 300px;
-}
-#slider li {
-  width: 100%;
 }
 
 a.control_prev, a.control_next {
