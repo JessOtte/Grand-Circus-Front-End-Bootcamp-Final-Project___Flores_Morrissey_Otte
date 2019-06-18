@@ -24,8 +24,8 @@ angular.module('WeatherEventApp')
       <a id="show" class="logo" href="#!/weather-list">WeatherBrite GR</a>
     </div>
 
-    <span class = "forecast">Extended Forecast: </span>
-    <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">{{item.main.temp | number:0}}</div>
+    <span class = "forecast">Extended Hourly Forecast: </span>
+    <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">{{item.main.temp | number:0}} ℉ </div>
   
 
     </div>

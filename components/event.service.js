@@ -74,6 +74,8 @@ function EventService ($http, $q) {
             })
         }
 
+        
+
         service.setDetails = (event) => {
             service.eventDetails = event;
         }

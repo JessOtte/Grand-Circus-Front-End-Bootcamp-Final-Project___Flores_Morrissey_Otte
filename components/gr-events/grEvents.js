@@ -567,7 +567,7 @@ function GrEvents(EventService, $q) {
   
   
   <h3 class="gr-events-title">Top 50 Things to Do in Grand Rapids</h3>
-  <div id="slider">
+  <div id="slider" style="width: 100%">
     <a href="#" class="control_next">></a>
     <a href="#" class="control_prev"><</a>
     <ul>

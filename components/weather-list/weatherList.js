@@ -25,7 +25,7 @@ angular.module('WeatherEventApp')
                     </div>
 
                     <div class = "description">
-                      <h5>Outside right now:<br><span class="data">{{$ctrl.weatherData.weather["0"].description}}</span></h5>
+                      <h5>Currently <span class="data">{{$ctrl.weatherData.weather["0"].description}}  </span></h5>
                       <br>
                       <img ng-src = "http://openweathermap.org/img/w/{{$ctrl.weatherData.weather[0].icon}}.png" class = "icon">
                     </div>

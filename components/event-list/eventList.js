@@ -1,21 +1,15 @@
 function EventList(EventService, $q) {
   const ctrl = this;
 
-
   ctrl.showDetailModule = false;
-
-
   ctrl.meetupData = [];
   ctrl.eventData = [];
   ctrl.eventList = [];
   
-
   EventService.fetchEvents()
   .then((response) => {
       ctrl.eventData = response;
-  
-    console.log(ctrl.eventData);
-    
+    console.log(ctrl.eventData);   
   
   });
 
@@ -27,7 +21,6 @@ function EventList(EventService, $q) {
         console.log(response);
   
             })
-   
        });
       }
 
@@ -45,7 +38,6 @@ function EventList(EventService, $q) {
         $("#show").click(function(){
           $("#event-list").show();
         });
-
       });
 
     
@@ -69,23 +61,18 @@ angular.module('WeatherEventApp')
 <div id= "main-box">
 <div id="box2" ng-repeat="item in $ctrl.eventData.events">
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
-<h3>{{item.name.text}}</h3>
+<h3 class="event-list-name">{{item.name.text}}</h3>
 
-<p>{{item.summary}}</p>
+<p class="event-list-name">{{item.summary}}</p>
 
 <a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)" href="#!/event-details">Event Details</a> 
  </div>
 
+ <br><br>
 
 
 
-<section id="gr-event">
-<gr-events></gr-events>
-</section>
-
-
-
-    </section>
+</div>
 
 `, // or use templateUrl
     controller: EventList,

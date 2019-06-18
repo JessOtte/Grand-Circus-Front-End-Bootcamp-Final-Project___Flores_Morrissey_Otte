@@ -344,12 +344,12 @@ h5 {
 
 }
 
+
 #filter {
   display: flex;
-  font-size: 4em;
+  font-size: 60px;
   font-weight: bolder;
-  margin-left: 11%;
-  margin-top: 4%;
+  justify-content: center;
 }
 
 
@@ -358,13 +358,28 @@ h5 {
   flex-direction: column; 
   justify-content: center;
   align-items: center; 
-  margin: 10px;
-  padding: 15px;
+  margin: 5px;
+  padding: 10px;
   width: 25vw;
-  -webkit-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
+ 
+  font-size: 0.9em;
+}
+
+#summary {
+  font-size: 11px;
+  width: 260px;
+  text-align: center;
+ 
+}
+
+#title-name {
+  font-size: 13px;
+}
+
+#box2:hover {
+   -webkit-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   -moz-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
-  font-size: 0.9em;
 }
 
 
@@ -372,8 +387,9 @@ h5 {
 h6 {
   text-align: center;
   font-family: 'Lato';
-  font-size: 80px; 
+  font-size: 110px; 
   color: white;
+  padding-right: 30px;
 }
 
 .description {
@@ -386,19 +402,22 @@ h6 {
   justify-content: flex-start;
   padding-top: 30px;
 }
-#event-list-logo {
-  width: 20vw;
-
-}
 
 
+ #event-list-logo {
+    height: 30vh;
+    width: 20vw;
+    /* object-fit: contain; */
+  }
+
+
+
+
+  
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-  #event-list-logo {
-    height: 260px;
-    width: 260px;
-  }
+ 
 
   #event-list-logo {
     height: 8vh;
@@ -434,6 +453,9 @@ h6 {
   background: #ccc;
   text-align: center;
   line-height: 300px;
+}
+#slider li {
+  width: 100%;
 }
 
 a.control_prev, a.control_next {
@@ -501,6 +523,10 @@ a.control_next {
 }
 .gr-events-title {
   font-size: 20px;
+  text-align: center;
+}
+.event-list-name {
+  width: 90%;
   text-align: center;
 }
 
