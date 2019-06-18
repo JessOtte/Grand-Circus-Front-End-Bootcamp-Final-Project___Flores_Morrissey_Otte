@@ -6,10 +6,10 @@ function EventList(EventService, $q) {
   ctrl.eventData = [];
   ctrl.eventList = [];
   
-  ctrl.eventLimit = 6; 
+  ctrl.eventLimit = 9; 
 
   ctrl.seeMore =() =>{ 
-    ctrl.eventLimit += 6;
+    ctrl.eventLimit += 9;
         };
 
 
@@ -70,12 +70,13 @@ angular.module('WeatherEventApp')
 
 <p class="event-list-name">{{item.summary}}</p>
 
-<a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)" href="#!/event-details" name="top">Event Details</a> 
+<a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)" name="top">Event Details</a> 
  </div>
 
  <br><br>
 
-
+ <a id="hide" class="btn btn-primary" ng-click="$ctrl.seeMore()" >See More</a> 
+ </div>
 
 </div>
 
