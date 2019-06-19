@@ -70,7 +70,7 @@ angular.module('WeatherEventApp')
 
 <p class="event-list-name">{{item.summary}}</p>
 
-<a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)"href="#!/event-details" name="top">Event Details</a> 
+<a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)"href="#!/event-details#event-top" name="top">Event Details</a> 
  </div>
 
  <br><br>

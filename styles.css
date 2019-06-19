@@ -1,3 +1,89 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+  #box {
+  flex-direction: column;
+  text-align: center;
+}
+.event-details-title {
+margin-top: 10px;
+}
+
+#purchase-tickets {
+  margin-top: 20px;
+}
+
+.go-back-btn-container {
+  top: 6vh;
+}
+
+}
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+
+  .event-details-img {
+    margin-left: 60px;
+  }
+
+#event-details-colored-box {
+  padding: 20vh;
+  background: #3AAFA9;
+  background-clip: border-box;  
+  width: 100vw;
+  /* height: 60%; */
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.date-time {
+  font-size: 14px;
+  color: white;
+
+}
+
+#box {
+  margin-bottom: 40px;
+}
+.event-details-city-and-start-date {
+  margin: 50px;
+  flex: 1;
+}
+
+.go-back-btn-container {
+  top: 10vh;
+}
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...}  */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...}  */
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...}  */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 a, article, body, div, fieldset, figcaption, figure, footer, form, header, h1, 
@@ -128,11 +214,12 @@ h5 {
     align-items: center;
     margin: 10px;
     padding: 15px;
-    margin-bottom: 40px;
 }
 
 
-/* BUTTON */
+/* BUTTON STYLING*/
+/* BUTTON STYLING*/
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -223,10 +310,14 @@ h5 {
   }
 
   /* BUTTON STYLING OVER */
+  /* BUTTON STYLING OVER */
+  /* BUTTON STYLING OVER */
+  /* BUTTON STYLING OVER */
 
 
 
-  #detail-module {
+
+  /* #detail-module {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,7 +330,14 @@ h5 {
     overflow-y: scroll;
     margin-left: 30%;
     top: 10vh;
-}
+} */
+
+
+/* EVENT-DETAILS STYLING */
+/* EVENT-DETAILS STYLING */
+/* EVENT-DETAILS STYLING */
+/* EVENT-DETAILS STYLING */
+
 
 .card-img-top {
   border-top-left-radius: calc(0.5rem - 3px);
@@ -262,45 +360,35 @@ h5 {
   margin-right: auto;
   width: 50%;
 }
-#event-details-colored-box {
-  padding: 20vh;
-  background: #3AAFA9;
-  background-clip: border-box;  
-  width: 100vw;
-  height: 60%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
+
 
 .event-details-title {
   color: #17252A;
-  font-size: 18px;
+  font-size: 80%;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin: 0 10px 20px 0;
   -webkit-text-stroke: 1px;
   letter-spacing: 1px;
 }
 
 .event-details-paragraph {
-  padding: 10px 95px;
+  padding: 0 25px;
   line-height: 20px;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: justify;
 }
 
 
 .event-details-img {
   border: solid #17252A 20px;
-  margin-left: 60px;
-  flex: 4;
+
 }
 
 .go-back-btn-container {
   width: 100vw;
   position: absolute;
-  top: 6vh;
   left: 3vw;
+
 }
 .back-btn-img {
   width: 6%;
@@ -309,16 +397,13 @@ h5 {
 .event-details-city-and-start-date {
   /* width: 55vw; */
   height: 20vh;
-  margin: 50px;
   font-size: 20px;
-  flex: 1;
 }
 
 .event-details-body {
   width: 100%;
 }
-#purchase-tickets {
-  margin-top: 40px;}
+
 
   .margin-left {
     margin-left: 30px;
@@ -330,10 +415,14 @@ h5 {
 }
 .date-time {
   font-size: 14px;
-  color: white;
+  color: 17252A;
 
 }
 
+/* EVENT-LIST STYLING */
+/* EVENT-LIST STYLING */
+/* EVENT-LIST STYLING */
+/* EVENT-LIST STYLING */
 
 #main-box {
   
@@ -410,22 +499,6 @@ h6 {
     /* object-fit: contain; */
   }
 
-
-
-
-  
-
-@media (min-width: 320px) and (max-width: 480px) {
-
- 
-
-  #event-list-logo {
-    height: 8vh;
-    width: 25vw;
-  }
- 
-
-}
 #slider {
   position: relative;
   overflow: hidden;
@@ -527,6 +600,18 @@ a.control_next {
   text-align: center;
 }
 
-  
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+ 
+
+
+ 
+
+}  
+
+
+
 
 
