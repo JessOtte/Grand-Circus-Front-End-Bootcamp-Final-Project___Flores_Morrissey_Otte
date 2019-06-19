@@ -44,6 +44,7 @@ margin-top: 10px;
 }
 
 
+
 }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -644,6 +645,47 @@ a.control_next {
    #box2 {
      width: 100%;
    }
+
+   h6 {
+    text-align: center;
+    font-family: 'Lato';
+    font-size: 30px; 
+    color: white;
+    padding-right: 10px;
+    padding-top: 30px;
+  }
+
+  h5 {
+    color: white;
+    font-size: 19px;
+    text-transform: capitalize;
+    padding-top: 30px;
+}
+
+.data {
+  font-size: 19px;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.temp-info {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.logo {
+  font-size: 12px; 
+}
+
+.forecast {
+  font-size: 12px; 
+  padding-left: 15px;
+}
  
 
 }  
