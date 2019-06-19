@@ -34,17 +34,6 @@ function EventList(EventService, $q) {
         EventService.setDetails(event)
       }
 
-
-
-      $(document).ready(function(){
-        $("#hide").click(function(){
-          $("#event-list").hide();
-        });
-        $("#show").click(function(){
-          $("#event-list").show();
-        });
-      });
-
     
     }
 

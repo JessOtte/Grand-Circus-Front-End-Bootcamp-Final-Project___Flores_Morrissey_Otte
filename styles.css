@@ -1,5 +1,24 @@
+/* Extra extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 320px) {
+
+  #event-top {
+    margin: 13vh 0 3vh 0;
+  }
+
+  .event-details-body h3 {
+    margin-top: 45px;
+}
+
+.go-back-btn-container {
+  top: 15vh;
+}
+.back-btn-img {
+  width: 15%;
+}
+}
+
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) {
   
   #box {
   flex-direction: column;
@@ -14,7 +33,14 @@ margin-top: 10px;
 }
 
 .go-back-btn-container {
-  top: 6vh;
+  top: 10vh;
+}
+#event-top {
+  margin-top: 10vh;
+}
+.back-btn-img {
+  width: 6%;
+
 }
 
 
@@ -52,7 +78,7 @@ margin-top: 10px;
 }
 
 .go-back-btn-container {
-  top: 10vh;
+  top: 6vh;
 }
 
 
@@ -387,10 +413,7 @@ h5 {
   left: 3vw;
 
 }
-.back-btn-img {
-  width: 6%;
 
-}
 .event-details-city-and-start-date {
   /* width: 55vw; */
   height: 20vh;
