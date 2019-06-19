@@ -50,7 +50,7 @@ angular.module('WeatherEventApp')
 </div>
 
 
-<div id= main-box>
+<div id="main-box">
 
 <div id="box2" ng-repeat="item in $ctrl.eventData.events | limitTo: $ctrl.eventLimit">
 
@@ -64,8 +64,11 @@ angular.module('WeatherEventApp')
 
  <br><br>
 
- <a id="hide" class="btn btn-primary" ng-click="$ctrl.seeMore()" >See More</a> 
  </div>
+ <div id="see-more-container">
+ <a id="see-more" class="btn btn-primary" ng-click="$ctrl.seeMore()">See More</a> 
+ </div>
+
 
 </div>
 

@@ -1,0 +1,19 @@
+{
+  "name": "eventbrite-gr",
+  "version": "1.0.0",
+  "description": "Providing users a way to check the weather and current events in Grand Rapids, MI.",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JessOtte/Grand-Circus-Front-End-Bootcamp-Final-Project___Flores_Morrissey_Otte.git"
+  },
+  "author": "Jessica Otte, Will Morrissey, Humberto Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JessOtte/Grand-Circus-Front-End-Bootcamp-Final-Project___Flores_Morrissey_Otte/issues"
+  },
+  "homepage": "https://github.com/JessOtte/Grand-Circus-Front-End-Bootcamp-Final-Project___Flores_Morrissey_Otte#readme"
+}

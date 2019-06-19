@@ -65,7 +65,7 @@ angular.module('WeatherEventApp')
 <p class="date-time">Starts: {{$ctrl.fullEvent.start.local}}</p>
 <p class="date-time">Ends: {{$ctrl.fullEvent.end.local}}</p>
 
-<a class="btn btn-primary" id="purchase-tickets" href="{{$ctrl.fullEvent.url}}">More Details From EventBrite</a>
+<a class="btn btn-primary" id="purchase-tickets" href="{{$ctrl.fullEvent.url}}" target="_blank" >More Details From EventBrite</a>
 
 </div>
 
@@ -78,7 +78,7 @@ angular.module('WeatherEventApp')
 
 
 <div class="go-back-btn-container">
-<a href="#!/event-list#event-results"><img src="./images/back-arrow-icon.png" alt="back to event results button" class="back-btn-img"></a>
+<a href="#!/event-list#event-results" ><img src="./images/back-arrow-icon.png" alt="back to event results button" class="back-btn-img"></a>
 </div>
 
 
