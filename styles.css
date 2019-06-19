@@ -17,6 +17,7 @@ margin-top: 10px;
   top: 6vh;
 }
 
+
 }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -54,9 +55,12 @@ margin-top: 10px;
   top: 10vh;
 }
 
+
+
+
+
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...}  */
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 /* @media only screen and (min-width: 768px) {...}  */
@@ -310,11 +314,6 @@ h5 {
   }
 
   /* BUTTON STYLING OVER */
-  /* BUTTON STYLING OVER */
-  /* BUTTON STYLING OVER */
-  /* BUTTON STYLING OVER */
-
-
 
 
   /* #detail-module {
@@ -334,9 +333,7 @@ h5 {
 
 
 /* EVENT-DETAILS STYLING */
-/* EVENT-DETAILS STYLING */
-/* EVENT-DETAILS STYLING */
-/* EVENT-DETAILS STYLING */
+
 
 
 .card-img-top {
@@ -420,9 +417,6 @@ h5 {
 }
 
 /* EVENT-LIST STYLING */
-/* EVENT-LIST STYLING */
-/* EVENT-LIST STYLING */
-/* EVENT-LIST STYLING */
 
 #main-box {
   
@@ -450,7 +444,6 @@ h5 {
   margin: 5px;
   padding: 10px;
   width: 25vw;
- 
   font-size: 0.9em;
 }
 
@@ -470,8 +463,6 @@ h5 {
   -moz-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
   box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
 }
-
-
 
 h6 {
   text-align: center;
@@ -607,6 +598,29 @@ a.control_next {
  
 
 
+  #event-list-logo {
+    display: none;
+  }
+  
+  #filter h1 {
+    font-size: 0.5em;
+  }
+  
+  
+  
+  #main-box {
+    
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
+   
+   
+   }
+
+   #box2 {
+     width: 100%;
+   }
  
 
 }  
