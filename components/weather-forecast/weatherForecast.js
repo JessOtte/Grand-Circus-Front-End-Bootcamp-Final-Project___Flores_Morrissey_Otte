@@ -25,7 +25,12 @@ angular.module('WeatherEventApp')
     </div>
 
     <span class = "forecast">Extended Hourly Forecast: </span>
-    <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">{{item.main.temp | number:0}} ℉ </div>
+    
+   <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">
+    {{item.dt_txt}}
+    <br>
+    {{item.main.temp | number:0}} ℉
+   </div>
   
 
     </div>
