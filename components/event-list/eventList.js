@@ -28,6 +28,22 @@ function EventList(EventService, $q) {
             })
        });
       }
+      EventService.fetchCategories()
+      .then((response) => {
+          ctrl.eventData = response;  
+          console.log(response);
+      });
+    
+      ctrl.fetchEvents = () => {
+        return $q(function(resolve, reject) {
+          // Call service, then set our data
+          EventService.fetchCategories()
+          .then ( (response) => {
+            console.log(response);
+      
+                })
+           });
+          }
 
       ctrl.callEventDetails = (event) => {
         console.log('I am fetching the event THE USER selected ==>', event);

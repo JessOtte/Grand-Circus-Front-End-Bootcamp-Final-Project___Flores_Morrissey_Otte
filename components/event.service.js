@@ -75,7 +75,30 @@ function EventService ($http, $q) {
         }
 
         
+// http request for categories 
 
+        service.fetchCategories = () => {
+    
+            // http request to get events info 
+    
+            return $q(function (resolve, reject) {
+               
+                $http({
+                    url: `https://www.eventbriteapi.com/v3/categories/?token=ERGFWMEMWJN2BHWUQT7X`,
+                    method: `GET`
+                    
+                })
+                    .then((response) => {
+                        let data = response.data;
+                        resolve(data);
+                    })
+                    .catch((error) => {
+                        reject(error);
+                    })
+            })
+        }
+
+        
         service.setDetails = (event) => {
             service.eventDetails = event;
         }
