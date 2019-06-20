@@ -43,7 +43,6 @@ angular.module('WeatherEventApp')
 
 
 <div id="event-results">
-<br><br>
 
 <div id="filter">
 <h1>Live the dream</h1>
