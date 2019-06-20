@@ -504,69 +504,190 @@ function GrEvents(EventService, $q) {
   
   
 
-        jQuery(document).ready(function ($) {
-			// console.log("I am loading the top 50 events in GR", ctrl.grEvents);
-  
-          $('#checkbox').change(function(){
-            setInterval(function () {
-                moveRight();
-            }, 3000);
-          });
-          
-          var slideCount = $('#slider ul li').length;
-          var slideWidth = $('#slider ul li').width();
-          var slideHeight = $('#slider ul li').height();
-          var sliderUlWidth = slideCount * slideWidth;
-          
-          $('#slider').css({ width: slideWidth, height: slideHeight });
-          
-          $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-          
-            $('#slider ul li:last-child').prependTo('#slider ul');
-        
-            function moveLeft() {
-                $('#slider ul').animate({
-                    left: + slideWidth
-                }, 100, function () {
-                    $('#slider ul li:last-child').prependTo('#slider ul');
-                    $('#slider ul').css('left', '');
-                });
-            };
-        
-            function moveRight() {
-                $('#slider ul').animate({
-                    left: - slideWidth
-                }, 100, function () {
-                    $('#slider ul li:first-child').appendTo('#slider ul');
-                    $('#slider ul').css('left', '');
-                });
-            };
-        
-            $('a.control_prev').click(function () {
-                moveLeft();
-            });
-        
-            $('a.control_next').click(function () {
-                moveRight();
-            });
-        
-        });
+
   
   
+
   
   
-  
+jQuery(document).ready(function ($) {
+
+
+	var scaling = 1.50;
+	//count
+	var currentSliderCount = 0;
+	var videoCount = $(".slider-container").children().length;
+	var showCount = 4;
+	var sliderCount = videoCount / showCount;
+	var controlsWidth = 40;
+	var scollWidth = 0;
+		
+	
+	$(document).ready(function(){
+		//$('.slider-container .slide:nth-last-child(-n+4)').prependTo('.slider-container');
+		init();
+		
+	});
+	$( window ).resize(function() {
+		init();
+	});
+	function init(){
+		// elements
+		var win = $(window);
+		var sliderFrame = $(".slider-frame");
+		var sliderContainer = $(".slider-container");
+		var slide = $(".slide");
+		
+		//counts
+		var scollWidth = 0;
+	 
+		
+		//sizes
+		var windowWidth = win.width();
+		var frameWidth = win.width() - 80;
+		 if(windowWidth >= 0 && windowWidth <= 414){
+		   showCount = 2;
+	   }else if(windowWidth >= 414 &&  windowWidth <= 768){
+		   showCount = 3;
+	   }else{
+		   showCount = 4;
+	   }
+		var videoWidth = ((windowWidth - controlsWidth * 2) / showCount );
+		var videoHeight = Math.round(videoWidth / (16/9));
+		
+		var videoWidthDiff = (videoWidth * scaling) - videoWidth;
+		var videoHeightDiff = (videoHeight * scaling) - videoHeight;
+		
+	  
+		
+		//set sizes
+		sliderFrame.width(windowWidth);
+		sliderFrame.height(videoHeight * scaling);
+		
+		
+		//sliderFrame.css("top", (videoHeightDiff / 2));
+		
+		sliderContainer.height(videoHeight * scaling);
+		sliderContainer.width((videoWidth * videoCount) + videoWidthDiff);
+		sliderContainer.css("top", (videoHeightDiff / 2));
+		sliderContainer.css("margin-left", (controlsWidth));
+		
+		slide.height(videoHeight);
+		slide.width(videoWidth);
+		
+		//hover effect
+		$(".slide").mouseover(function() {
+			$(this).css("width", videoWidth * scaling);
+			$(this).css("height", videoHeight * scaling);
+			$(this).css("top", -(videoHeightDiff / 2));
+			if($(".slide").index($(this)) == 0 || ($(".slide").index($(this))) % 4 == 0){
+			  // do nothing
+			}
+			else if(($(".slide").index($(this)) + 1) % 4 == 0 && $(".slide").index($(this)) != 0){
+				$(this).parent().css("margin-left", -(videoWidthDiff - controlsWidth));
+			}
+			else{
+				$(this).parent().css("margin-left", - (videoWidthDiff / 2));
+			}
+		}).mouseout(function() {
+			$(this).css("width", videoWidth * 1);
+			$(this).css("height", videoHeight * 1);
+			$(this).css("top", 0);
+			$(this).parent().css("margin-left", controlsWidth);
+		});
+		
+		// controls
+		controls(frameWidth, scollWidth);
+	}
+	function controls(frameWidth, scollWidth){
+		var prev = $(".prev");
+		var next = $(".next");
+		
+		next.on("click", function(){
+			console.log(currentSliderCount);
+			console.log(sliderCount);
+			scollWidth = scollWidth + frameWidth;
+			$('.slider-container').animate({
+				left: - scollWidth
+			}, 300, function(){ 
+				if(currentSliderCount >= sliderCount-1){
+					$(".slider-container").css("left", 0);
+					currentSliderCount = 0;
+					scollWidth = 0;
+				}else{
+					currentSliderCount++;
+				}
+			});        
+		});
+		prev.on("click", function(){
+			scollWidth = scollWidth - frameWidth;
+			$('.slider-container').animate({
+				left: + scollWidth
+			}, 300, function(){ 
+				currentSliderCount--;
+			});
+			//$(".slider-container").css("left", scollWidth);
+		});
+	};
+	
+	});
       
-      }
+	  }
+	  
+
   
   angular.module('WeatherEventApp')
     .component('grEvents', {
       template: `
   
 <div id="gr-events">
+
+
+<div class="slider-frame">
+    <div class="button prev" ></div>
+    <div class="button next"></div>
+	<div class="slider-container">
+	<ul ng-repeat="item in $ctrl.grEvents">
+		<a href="{{item.website}}" target="_blank">
+        	<span class="slide"><img class="slider-img" ng-src="{{item.img}}" alt="{{item.destination}}">
+			</span>
+		</a>
+	</ul>	
+
+    </div>
+</div>
+
+<!--
+<li ng-repeat="item in $ctrl.grEvents">
+<a href="{{item.website}}" target="_blank">
+<img class="slider-img" ng-src="{{item.img}}" alt="{{item.destination}}">
+<div class="bottom-destination">{{item.destination}}</div>
+<div class="bottom-summary">{{item.summary}}</div>
+</a>
+</li>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
-  
+  <!--
   <h3 class="gr-events-title">Top 50 Things to Do in Grand Rapids</h3>
   <div id="slider">
     <a href="#" class="control_next">></a>
@@ -588,11 +709,9 @@ function GrEvents(EventService, $q) {
     <input type="checkbox" id="checkbox">
     <label for="checkbox">Autoplay Slider</label>
   </div> 
-  
-  
-  
-  
-      </div>
+  -->
+
+</div>
   
   `, // or use templateUrl
       controller: GrEvents,
