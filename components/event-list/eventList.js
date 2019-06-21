@@ -15,7 +15,9 @@ function EventList(EventService, $q) {
 
   EventService.fetchEvents()
   .then((response) => {
-      ctrl.eventData = response;  
+      ctrl.eventData = response; 
+      console.log(response);
+ 
   });
 
   ctrl.fetchEvents = () => {
@@ -72,7 +74,7 @@ angular.module('WeatherEventApp')
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
 <h3 class="event-list-name">{{item.name.text}}</h3>
 
-<p class="event-list-name">{{item.summary}}</p>
+<p class="event-list-name">{{item.venue.name}}</p>
 
 <a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)"href="#!/event-details#event-top" name="top">Event Details</a> 
  </div>

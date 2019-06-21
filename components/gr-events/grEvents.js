@@ -654,8 +654,8 @@ jQuery(document).ready(function ($) {
 		var next = $(".next");
 		
 		next.on("click", function(){
-			console.log(currentSliderCount);
-			console.log(sliderCount);
+			// console.log(currentSliderCount);
+			// console.log(sliderCount);
 			scollWidth = scollWidth + frameWidth;
 			$('.slider-container').animate({
 				left: - scollWidth
@@ -676,7 +676,7 @@ jQuery(document).ready(function ($) {
 			}, 300, function(){ 
 				currentSliderCount--;
 			});
-			//$(".slider-container").css("left", scollWidth);
+			$(".slider-container").css("left", scollWidth);
 		});
 	};
 	
@@ -697,12 +697,13 @@ jQuery(document).ready(function ($) {
     <div class="button prev" ></div>
     <div class="button next"></div>
 	<div class="slider-container">
-	<ul ng-repeat="item in $ctrl.grEvents">
+	<li ng-repeat="item in $ctrl.grEvents">
 		<a href="{{item.website}}" target="_blank">
-        	<span class="slide"><img class="slider-img" ng-src="{{item.img}}" alt="{{item.destination}}">
-			</span>
+			<img class="slider-img slide" ng-src="{{item.img}}" alt="{{item.destination}}">
+			<div class="bottom-destination">{{item.destination}}</div>
+			<div class="bottom-summary">{{item.summary}}</div>
 		</a>
-	</ul>	
+	</li>	
 
     </div>
 </div>
@@ -743,13 +744,13 @@ jQuery(document).ready(function ($) {
     <a href="#" class="control_next">></a>
     <a href="#" class="control_prev"><</a>
     <ul>
-      <li ng-repeat="item in $ctrl.grEvents">
+      <div ng-repeat="item in $ctrl.grEvents">
       <a href="{{item.website}}" target="_blank">
       <img class="slider-img" ng-src="{{item.img}}" alt="{{item.destination}}">
       <div class="bottom-destination">{{item.destination}}</div>
       <div class="bottom-summary">{{item.summary}}</div>
       </a>
-      </li>
+      </div>
     </ul>  
   </div>
   
