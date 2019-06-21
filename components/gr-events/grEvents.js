@@ -764,7 +764,10 @@ jQuery(document).ready(function ($) {
 </div>
   
   `, // or use templateUrl
-      controller: GrEvents,
+	  controller: GrEvents,
+	  bindings: {
+		grEvents: "&"
+	  }
   
   
     });

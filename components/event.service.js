@@ -105,7 +105,15 @@ function EventService ($http, $q) {
 
         service.getDetails = () => {
             return service.eventDetails;
-        }     
+        }
+        
+
+        // for recommending events based on weather
+        // we need description string from API 
+        service.recommendEvents = () => {
+            // logic needed
+
+        }
 }
     
 angular
