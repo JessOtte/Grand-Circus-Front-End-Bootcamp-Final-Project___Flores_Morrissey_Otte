@@ -60,7 +60,7 @@ function EventService ($http, $q) {
             return $q(function (resolve, reject) {
                
                 $http({
-                    url: `https://www.eventbriteapi.com/v3/events/search/?location.address=49503&location.within=30mi&start_date.keyword=this_weekend&token=IYBEWZZEFXT3EA6JODBG`,
+                    url: `https://www.eventbriteapi.com/v3/events/search/?location.address=49503&location.within=30mi&start_date.keyword=this_weekend&expand=venue&token=IYBEWZZEFXT3EA6JODBG`,
                     method: `GET`
                     
                 })
