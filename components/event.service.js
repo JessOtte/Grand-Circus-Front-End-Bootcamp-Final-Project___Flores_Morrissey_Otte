@@ -1,4 +1,4 @@
-function EventService ($http, $q) {
+function EventService ($http, $q, grEvents) {
         const service = this;
 
         service.eventDetails = null;
@@ -110,8 +110,17 @@ function EventService ($http, $q) {
 
         // for recommending events based on weather
         // we need description string from API 
-        service.recommendEvents = () => {
-            // logic needed
+        service.recommendEvents = (string) => {
+
+            //Still working on logic here
+            if(string.includes("rain")) {
+                return grEvents.outdoor === false;
+            }else if(string.includes("snow")) {
+                return grEvents.outdoor === false;
+            }
+            console.log(grEvents);
+            
+
 
         }
 }
