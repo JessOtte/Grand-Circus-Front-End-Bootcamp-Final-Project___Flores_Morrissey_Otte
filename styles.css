@@ -202,7 +202,7 @@ a:visited {
 }
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color:#17252A;
   padding: 5px 20px;
   position: fixed;
