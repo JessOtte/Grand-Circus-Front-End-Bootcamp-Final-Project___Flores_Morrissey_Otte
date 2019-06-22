@@ -5,14 +5,20 @@ function EventList(EventService, $q) {
   ctrl.meetupData = [];
   ctrl.eventData = [];
   ctrl.eventList = [];
+  ctrl.eventCategories = [];
   
-  ctrl.eventLimit = 9; 
+   ctrl.eventLimit = 9; 
+  ctrl.selectedCategory = "";
 
   ctrl.seeMore =() =>{ 
     ctrl.eventLimit += 9;
         };
 
-
+  ctrl.selectCategory = function(category) {
+    ctrl.eventData = response;
+  var a = category;
+  }
+  
   EventService.fetchEvents()
   .then((response) => {
       ctrl.eventData = response; 
@@ -32,20 +38,20 @@ function EventList(EventService, $q) {
       }
       EventService.fetchCategories()
       .then((response) => {
-          ctrl.eventData = response;  
+          ctrl.eventCategories = response; 
           console.log(response);
       });
     
-      ctrl.fetchEvents = () => {
-        return $q(function(resolve, reject) {
-          // Call service, then set our data
-          EventService.fetchCategories()
-          .then ( (response) => {
-            console.log(response);
+      // ctrl.fetchEvents = () => {
+      //   return $q(function(resolve, reject) {
+      //     // Call service, then set our data
+      //     EventService.fetchCategories()
+      //     .then ( (response) => {
+      //       console.log(response);
       
-                })
-           });
-          }
+      //           })
+      //      });
+      //     }
 
       ctrl.callEventDetails = (event) => {
         console.log('I am fetching the event THE USER selected ==>', event);
@@ -60,12 +66,17 @@ angular.module('WeatherEventApp')
     template: `
 
 
-<div id="event-results">
 
-<div id="filter">
-<h1>Live the dream</h1>
+
+<div id="filters">
+<div>
+<select ng-model="selectCategory" class="custom-select" style="width:200px;">
+<option value="" selected="selected">Category</option>
+<option ng-repeat="item in $ctrl.eventCategories.categories" value="{{item.name}}">{{item.name}}</option>
+</select>
 </div>
-
+</div>
+<div id="event-results">
 
 <div id="main-box">
 
