@@ -243,6 +243,10 @@ function controls(frameWidth, scollWidth){
 	
 
 };
+
+ctrl.$onChanges = (changesObj) => {
+    initSlider();
+  };
  
   
   	$scope.$watch('ctrl.grEvents', () => {
