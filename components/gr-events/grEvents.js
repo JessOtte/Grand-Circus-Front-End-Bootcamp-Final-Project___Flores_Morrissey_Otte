@@ -1,14 +1,7 @@
 function GrEvents(EventService, $q, $scope) {
 	const ctrl = this;
 	
-	$scope.$watch('ctrl.weather', () => {
 
-		// console.log(ctrl);
-		// EventService.recommendEvents(ctrl.weather, ctrl.grEvents) 
-
-
-		
-	});
 
 	
 
@@ -246,11 +239,21 @@ function controls(frameWidth, scollWidth){
         });
 		 
        // $("#trending-items").css("left", scollWidth);
-    });
+	});
+	
+
 };
  
   
-  
+  	$scope.$watch('ctrl.grEvents', () => {
+		console.log("CHANGED");
+		// console.log(ctrl);
+		// EventService.recommendEvents(ctrl.weather, ctrl.grEvents) 
+
+		console.log(initSlider);
+
+		initSlider();
+	});
 
       
 	  }
