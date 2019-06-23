@@ -1,11 +1,14 @@
 function WeatherList(EventService) {
     const ctrl = this;
     let id = '4994358';
+    ctrl.grEvents = [];
     
 
 EventService.fetchWeather(id)
 .then((response) => {
     ctrl.weatherData = response;
+
+    ctrl.grEvents = EventService.recommendEvents(ctrl.weatherData.weather["0"].description)
 
 });
 
@@ -46,7 +49,7 @@ angular.module('WeatherEventApp')
 
     </div>
 
-    <gr-events></gr-events>
+    <gr-events gr-events="$ctrl.grEvents"></gr-events>
 
     <event-list></event-list>
 
