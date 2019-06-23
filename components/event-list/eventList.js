@@ -75,6 +75,13 @@ angular.module('WeatherEventApp')
 <option ng-repeat="item in $ctrl.eventCategories.categories" value="{{item.name}}">{{item.name}}</option>
 </select>
 </div>
+
+<div>
+<select ng-model="selectCategory" class="custom-select" style="width:200px;">
+<option value="" selected="selected">Price</option>
+<option value="{{item.is_free}}">{{item.is_free}}</option>
+</select>
+</div>
 <div>
 
 </div>
