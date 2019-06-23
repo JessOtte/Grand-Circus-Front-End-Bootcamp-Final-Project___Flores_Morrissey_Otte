@@ -56,7 +56,7 @@ function EventService ($http, $q, grEvents) {
         service.fetchEvents = (categoryID) => {
     
             // http request to get events info 
-            let url =  `https://www.eventbriteapi.com/v3/events/search/?location.address=49503&location.within=30mi&start_date.keyword=this_month&expand=venue&token=IYBEWZZEFXT3EA6JODBG`;
+            let url =  `https://www.eventbriteapi.com/v3/events/search/?location.address=49503&location.within=30mi&start_date.keyword=today&expand=venue&token=IYBEWZZEFXT3EA6JODBG`;
 
             if ( categoryID ) {
                url+= ('&categories='+categoryID);
