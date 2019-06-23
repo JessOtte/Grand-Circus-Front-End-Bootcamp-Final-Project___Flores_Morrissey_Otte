@@ -53,14 +53,18 @@ function EventService ($http, $q, grEvents) {
            })
        }
 
-        service.fetchEvents = () => {
+        service.fetchEvents = (categoryID) => {
     
             // http request to get events info 
-    
+            let url =  `https://www.eventbriteapi.com/v3/events/search/?location.address=49503&location.within=30mi&start_date.keyword=this_month&expand=venue&token=IYBEWZZEFXT3EA6JODBG`;
+
+            if ( categoryID ) {
+               url+= ('&categories='+categoryID);
+            }
             return $q(function (resolve, reject) {
                
                 $http({
-                    url: `https://www.eventbriteapi.com/v3/events/search/?location.address=49503&location.within=30mi&start_date.keyword=this_weekend&expand=venue&token=IYBEWZZEFXT3EA6JODBG`,
+                    url: url,
                     method: `GET`
                     
                 })
