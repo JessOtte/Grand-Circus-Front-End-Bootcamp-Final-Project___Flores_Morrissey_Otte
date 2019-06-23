@@ -15,8 +15,15 @@ function EventList(EventService, $q) {
         };
 
   ctrl.selectCategory = function(category) {
-    ctrl.eventData = response;
-  var a = category;
+  //   ctrl.eventData = response;
+  // var a = category;
+  console.log(category);
+  EventService.fetchEvents(category)
+  .then((response) => {
+      ctrl.eventData = response; 
+      console.log(response);
+ 
+  });
   }
   
   EventService.fetchEvents()
@@ -70,9 +77,9 @@ angular.module('WeatherEventApp')
 
 <div id="filters">
 <div>
-<select ng-model="selectCategory" class="custom-select" style="width:200px;">
+<select ng-model="selectedCategory" ng-change= "$ctrl.selectCategory(selectedCategory)" class="custom-select" style="width:200px;">
 <option value="" selected="selected">Category</option>
-<option ng-repeat="item in $ctrl.eventCategories.categories" value="{{item.name}}">{{item.name}}</option>
+<option ng-repeat="item in $ctrl.eventCategories.categories" value="{{item.id}}">{{item.name}}</option>
 </select>
 </div>
 
