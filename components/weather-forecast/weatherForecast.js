@@ -9,8 +9,9 @@ console.log(true);
 
    console.log(ctrl.weatherData);
 
-
 }
+
+
 )};
 
 //   <div ng-repeat = "item in $ctrl.weatherData.list">{{item.weather['0']}}</div>
@@ -28,8 +29,8 @@ angular.module('WeatherEventApp')
     <span class = "forecast"> Extended Forescast: </span>
     
    <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">
-    <!-- {{item.dt_txt}}-->
-    {{item.main.temp | number:0}} ℉
+    <div>{{ (item.dt *  1000) | date:'shortTime'}}</div>
+    <div>{{item.main.temp | number:0}} ℉</div>
    </div>
   </div>
 
