@@ -4,8 +4,11 @@ function EventList(EventService, $q) {
   ctrl.showDetailModule = false;
   ctrl.meetupData = [];
   ctrl.eventData = [];
+  ctrl.freeEvents = [];
+  ctrl.paidEvents = [];
   ctrl.eventList = [];
   ctrl.eventCategories = [];
+  ctrl.priceSelection = null;
   
    ctrl.eventLimit = 9; 
   ctrl.selectedCategory = "";
@@ -21,14 +24,39 @@ function EventList(EventService, $q) {
   EventService.fetchEvents(category)
   .then((response) => {
       ctrl.eventData = response; 
-      console.log(response);
- 
+      
+     // create two arrays, one with free events, and one with events that cost money
+     ctrl.freeEvents = (response.events).filter(function(item) {
+      return item.is_free === true;
+    })
+
+    ctrl.paidEvents = (response.events).filter(function(item) {
+      return item.is_free !== true;
+    })
   });
   }
+
+ctrl.selectPrice = function(price) {
+  if (price === "free") {
+    ctrl.eventData.events = ctrl.freeEvents;
+  } else if (price === "paid") {
+    ctrl.eventData.events = ctrl.paidEvents;
+  }
+}
   
   EventService.fetchEvents()
   .then((response) => {
-      ctrl.eventData = response; 
+    ctrl.eventData = response; 
+
+    // create two arrays, one with free events, and one with events that cost money
+    ctrl.freeEvents = (response.events).filter(function(item) {
+      return item.is_free === true;
+    })
+
+    ctrl.paidEvents = (response.events).filter(function(item) {
+      return item.is_free !== true;
+    })
+
       console.log(response);
  
   });
@@ -84,9 +112,9 @@ angular.module('WeatherEventApp')
 </div>
 
 <div>
-<select ng-model="selectCategory" class="custom-select" style="width:200px;">
-<option value="" selected="selected">Price</option>
-<option value="{{item.is_free}}">{{item.is_free}}</option>
+<select ng-model="priceSelection" class="custom-select" ng-change="$ctrl.selectPrice(priceSelection)" style="width:200px;">
+<option value="free" selected="free">Free Events</option>
+<option value="paid" selected="paid">Paid Events</option>
 </select>
 </div>
 <div>
@@ -101,7 +129,7 @@ angular.module('WeatherEventApp')
 
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
 <h3 class="event-list-name">{{item.name.text}}</h3>
-
+<h3 class="event-list-name">{{item.is_free}}</h3>
 <p class="event-list-name">{{item.venue.name}}</p>
 
 <a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)"href="#!/event-details#event-top" name="top">Event Details</a> 
