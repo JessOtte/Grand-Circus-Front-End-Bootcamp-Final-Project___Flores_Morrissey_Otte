@@ -46,12 +46,13 @@ angular.module('WeatherEventApp')
         </div>
      
         </div>
+        <gr-events gr-events="$ctrl.grEvents"></gr-events>
+
+        <event-list></event-list>
 
     </div>
 
-    <gr-events gr-events="$ctrl.grEvents"></gr-events>
-
-    <event-list></event-list>
+   
 
 
 
