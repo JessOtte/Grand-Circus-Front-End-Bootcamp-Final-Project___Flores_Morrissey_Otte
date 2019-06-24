@@ -47,7 +47,7 @@ function EventDetails(EventService, $q) {
 
       var msec = Date.parse("March 21, 2012");
       var d = new Date(msec);
-      document.getElementById("demo").innerHTML = d;
+      document.getElementById("event-details-date-time").innerHTML = d;
 
     }
 
@@ -65,8 +65,12 @@ angular.module('WeatherEventApp')
 <div class="event-details-city-and-start-date">
 <h3 class="event-details-title">{{$ctrl.fullEvent.name.text}}</h3>
 <p class="city">{{$ctrl.fullEvent.augmented_location.city}}</p>
-<p id="demo" class="date-time">Starts: {{$ctrl.fullEvent.start.local}}</p>
-<p id="demo" class="date-time">Ends: {{$ctrl.fullEvent.end.local}}</p>
+<p id="event-details-date-time" class="event-details-date-time">Starts at: {{$ctrl.fullEvent.start.local  | date:'shortTime'}}</p>
+<p id="event-details-date-time" class="event-details-date-time">on: {{$ctrl.fullEvent.start.local  | date:'fullDate'}}</p>
+
+<p id="event-details-date-time" class="event-details-date-time">Ends at: {{$ctrl.fullEvent.end.local  | date:'shortTime'}}</p>
+<p id="event-details-date-time" class="event-details-date-time">on: {{$ctrl.fullEvent.end.local  | date:'fullDate'}}</p>
+
 
 <a class="btn btn-primary" id="purchase-tickets" href="{{$ctrl.fullEvent.url}}" target="_blank" >More Details From EventBrite</a>
 

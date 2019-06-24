@@ -14,5 +14,13 @@ angular
                 // Load the display component
             template: "<weather-list></weather-list>"
             })
+            .when("/meet-the-team", {
+                // Load the display component
+            template: "<meet-the-team></meet-the-team>"
+            })
+            .when("/gr-event-list", {
+                // Load the display component
+            template: "<gr-event-list></gr-event-list>"
+            })
             .otherwise({ redirectTo: "/weather-list" });
     }]);

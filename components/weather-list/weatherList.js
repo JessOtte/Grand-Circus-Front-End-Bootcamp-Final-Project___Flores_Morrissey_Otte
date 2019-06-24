@@ -41,7 +41,7 @@ angular.module('WeatherEventApp')
 
 
         <div class="app-info-text">
-          <h3 class="welcome-message-title"> Welcome to WeatherBrite GR </h3>
+          <h3 class="meet-the-team-title"> Welcome to WeatherBrite GR </h3>
           <p class="welcome-message-paragraph">Since the current conditions are {{$ctrl.weatherData.weather["0"].description}}, we recommend the following events for your journey today in Grand Rapids, MI.</p>
         </div>
      
