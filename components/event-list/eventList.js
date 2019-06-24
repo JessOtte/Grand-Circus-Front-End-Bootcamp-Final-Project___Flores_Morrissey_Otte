@@ -104,19 +104,19 @@ angular.module('WeatherEventApp')
 
 
 <div id="filters">
-<div>
-<select ng-model="selectedCategory" ng-change= "$ctrl.selectCategory(selectedCategory)" class="custom-select" style="width:200px;">
-<option value="" selected="selected">Category</option>
-<option ng-repeat="item in $ctrl.eventCategories.categories" value="{{item.id}}">{{item.name}}</option>
-</select>
+  <div>
+  <select ng-model="selectedCategory" ng-change= "$ctrl.selectCategory(selectedCategory)" class="custom-select" style="width:200px;">
+    <option value="" selected="selected">Category</option>
+    <option ng-repeat="item in $ctrl.eventCategories.categories" value="{{item.id}}">{{item.name}}</option>
+  </select>
 </div>
 
-<div>
-<select ng-model="priceSelection" class="custom-select" ng-change="$ctrl.selectPrice(priceSelection)" style="width:200px;">
-<option value="free" selected="free">Free Events</option>
-<option value="paid" selected="paid">Paid Events</option>
-</select>
-</div>
+  <div>
+    <select ng-model="priceSelection" class="custom-select" ng-change="$ctrl.selectPrice(priceSelection)" style="width:200px;">
+      <option value="free" selected="free">Free Events</option>
+      <option value="paid" selected="paid">Paid Events</option>
+    </select>
+  </div>
 <div>
 
 </div>

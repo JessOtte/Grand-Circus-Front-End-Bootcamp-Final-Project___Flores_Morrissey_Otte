@@ -343,10 +343,11 @@ h5 {
 #filters {
     text-align: center;    
     display: flex;
-    height: 10vh;
+    height: 15vh;
     width: 100vw;
     justify-content: center;
     background: #2E4057;
+    align-items: center;
 
 }
 
@@ -578,7 +579,7 @@ h5 {
   margin: 5px;
   padding: 10px;
   width: 25vw;
-  font-size: 0.9em;
+  font-size: 0.7em;
 }
 
 #summary {
@@ -593,9 +594,9 @@ h5 {
 }
 
 #box2:hover {
-   -webkit-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
-  -moz-box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
-  box-shadow: inset 0px 0px 8px -1px rgba(0,0,0,0.50);
+   -webkit-box-shadow: inset 0px 0px 6px -1px rgba(0,0,0,0.50);
+  -moz-box-shadow: inset 0px 0px 6px -1px rgba(0,0,0,0.50);
+  box-shadow: inset 0px 0px 6px -1px rgba(0,0,0,0.50);
 }
 
  #event-list-logo {
