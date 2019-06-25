@@ -213,6 +213,7 @@ a:visited {
   z-index: 999;
   width: 100vw;
   top: 0;
+  text-align: center;
 }
 
   .container {
@@ -330,18 +331,17 @@ h5 {
 .extended {
   display: flex;
   flex-direction: row;
-  margin-right: 50px;
+  justify-content: center;
 }
 
 #filters {
-    text-align: center;    
-    display: flex;
-    height: 15vh;
-    width: 100vw;
-    justify-content: center;
-    background: #2E4057;
-    align-items: center;
-
+  text-align: center;
+  display: flex;
+  height: 15vh;
+  width: 100vw;
+  justify-content: space-evenly;
+  background: #2E4057;
+  align-items: center;
 }
 
 #box {
@@ -528,9 +528,9 @@ h5 {
   width: 50%;
   margin: 50px 0 50px 0;
 }
-  .margin-left {
+  /* .margin-left {
     margin-left: 30px;
-}
+} */
 .city {
   font-size: 16px;
   color: white;
@@ -669,6 +669,7 @@ font-size: 1em;
   position: relative;
   margin: 0;
   overflow: hidden;
+  margin-top: -1vh;
 }
 
 .slider-frame .button {
@@ -809,4 +810,8 @@ img.slider-img {
   padding: 20px;
   z-index: 999;
 }
+
+
+
+
 
