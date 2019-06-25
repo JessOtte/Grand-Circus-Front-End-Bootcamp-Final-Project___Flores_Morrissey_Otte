@@ -28,8 +28,8 @@ angular.module('WeatherEventApp')
     template: `
     <div class="nav-container">
 
-    <div>
-      <a id="show" class="logo" href="#!/weather-list">WeatherBrite GR</a>
+    <div class="logo">
+      <a id="show" class="logo" href="#!/weather-list"><img src="./images/weather-brite-gr-logo.png" alt="WeatherBrite GR Logo"></a>
     </div>
 
     <div  class="extended">
