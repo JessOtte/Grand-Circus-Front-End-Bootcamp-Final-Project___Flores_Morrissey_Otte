@@ -26,7 +26,6 @@ EventService.fetchWeather(id)
 angular.module('WeatherEventApp')
   .component('weatherForecast', {
     template: `
-    <div class="nav-container">
 
     <div class="logo">
       <a id="show" class="logo" href="#!/weather-list"><img src="./images/weather-brite-gr-logo.png" alt="WeatherBrite GR Logo"></a>
@@ -43,7 +42,6 @@ angular.module('WeatherEventApp')
    </div>
   </div>
 
-    </div>
 
 
 
