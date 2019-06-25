@@ -12,7 +12,31 @@ EventService.fetchWeather(id)
 
 });
 
-
+window.onload = function() {
+  clock();  
+    function clock() {
+    var now = new Date();
+    var TwentyFourHour = now.getHours();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+    var mid = 'pm';
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (hour > 12) {
+      hour = hour - 12;
+    }    
+    if(hour==0){ 
+      hour=12;
+    }
+    if(TwentyFourHour < 12) {
+       mid = 'am';
+    }     
+  document.getElementById('current-time').innerHTML =     hour+':'+min+':'+sec +' '+mid ;
+    setTimeout(clock, 1000);
+    }
+}
 
 }
 
@@ -24,25 +48,39 @@ angular.module('WeatherEventApp')
 
 
 
-
+    <div>
+      <h1 id="current-time"></h1>
+    </div>
     
     <div id="event-list-colored-box"></div>
       <div class="weather-container">
 
         <div class = "description">
-          <h5 class="data">{{$ctrl.weatherData.main.temp | number:0}}°</h5>
+        <h5 class="data">{{$ctrl.weatherData.main.temp | number:0}}°</h5>
 
-          <h5 class="data" id="weather-conditions">Currently {{$ctrl.weatherData.weather["0"].description}}</h5> 
-          <h6 class="grand-rapids"> Grand Rapids - Michigan </h6> 
-          <div><img ng-src = "http://openweathermap.org/img/w/{{$ctrl.weatherData.weather[0].icon}}.png" class = "icon">
-        </div>
+          <div>
+            <h5 class="data" id="weather-conditions">Currently {{$ctrl.weatherData.weather["0"].description}}
+            <img ng-src = "http://openweathermap.org/img/w/{{$ctrl.weatherData.weather[0].icon}}.png" class = "icon">
+
+            </h5>
+          </div>
+           
         </div>
 
 
 
         <div class="app-info-text">
-          <h3 class="welcome-message-title"> Welcome to WeatherBrite GR </h3>
-          <p class="welcome-message-paragraph">Since the current conditions are {{$ctrl.weatherData.weather["0"].description}}, we recommend the following events for your journey today in Grand Rapids, MI.</p>
+          <h3 class="welcome-message-title">Some days you have to create your own sunshine</h3>
+          <p class="welcome-message-paragraph">
+          We often find ourselves dependent on the weather when looking for an activity 
+          in Grand Rapids, Michigan. 
+          <br>
+          So if you're new in town, just passing through or call yourself 
+          a local, we have recommended activities based on the weather to help you venture out into 
+          Grand Rapids today...
+          </p>
+          <br>
+          <h4 id="rec-events-title" class="welcome-message-title">Since the current conditions are {{$ctrl.weatherData.weather["0"].description}}, we recommend the following activities for your journey today.</h4>
         </div>
      
         </div>

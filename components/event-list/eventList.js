@@ -47,6 +47,8 @@ ctrl.selectPrice = function(price) {
   EventService.fetchEvents()
   .then((response) => {
     ctrl.eventData = response; 
+    console.log(response);
+
 
     // create two arrays, one with free events, and one with events that cost money
     ctrl.freeEvents = (response.events).filter(function(item) {
@@ -71,6 +73,7 @@ ctrl.selectPrice = function(price) {
             })
        });
       }
+
       EventService.fetchCategories()
       .then((response) => {
           ctrl.eventCategories = response; 
@@ -133,12 +136,25 @@ angular.module('WeatherEventApp')
 
 <div id="box2" ng-repeat="item in $ctrl.eventData.events | limitTo: $ctrl.eventLimit">
 
+<div class="event-img-container">
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
+</div>
+<dic class="event-card-info">
 <h3 class="event-list-name">{{item.name.text}}</h3>
-<p class="event-list-name">{{item.venue.name}}</p>
+<p class="event-list-venue">{{item.venue.name}}</p>
 
-<a id="hide" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)"href="#!/event-details#event-top" name="top">Event Details</a> 
- </div>
+<p class="event-list-date-time"><strong>Starts:</strong> {{item.start.local  | date:'shortTime'}}
+{{item.start.local  | date:'fullDate'}}</p>
+
+<p class="event-list-date-time"><strong>Ends:</strong> {{item.end.local  | date:'shortTime'}}
+{{item.end.local  | date:'fullDate'}}</p>
+
+<p class="event-list-free"><strong>Free Event:</strong> {{item.is_free}}</p>
+
+
+<a id="event-list-btn" class="btn btn-primary" ng-click="$ctrl.callEventDetails(item)"href="#!/event-details#event-top" name="top">Event Details</a> 
+</div> 
+</div>
 
  <br><br>
 

@@ -41,7 +41,7 @@ angular.module('WeatherEventApp')
 <img class="card-img-top" src="./images/jessica-otte.jpg" alt="Jessica Otte">
 <div class="card-body">
   <h5 class="card-title">Jessica Otte</h5>
-  <p class="card-text">DESIGNER, DEVELOPER, MARKETER: Making digital media prettier and more user-friendly, one campaign at a time.</p>
+  <p class="card-text">Designer || Developer || Marketer</p>
   <a href="https://www.linkedin.com/in/jessotte/" target="_" class="btn btn-primary">Let's Connect</a>
 </div>
 </div>
