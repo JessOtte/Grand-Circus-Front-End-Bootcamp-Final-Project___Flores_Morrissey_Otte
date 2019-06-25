@@ -323,6 +323,7 @@ h5 {
 #weather-conditions {
     font-size: 5vh;
     margin-top: -5vh;
+    padding-top: 5vh;
 }
 .forecast {
   color: white;
