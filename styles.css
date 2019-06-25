@@ -251,13 +251,10 @@ h5 {
   width: 100vw;
   color: #fff;
   background-color: #3AAFA9;
-<<<<<<< HEAD
-=======
   /* background-image: url(images/Grand-Rapids.jpg);
   background-size: cover;
   background-repeat: no-repeat; */
   /* top: 2vh; */
->>>>>>> b43f3861bed05aa4309599aa5ed737de72b082e0
   margin-top: -3%;
   display: flex;
   flex-grow: inherit;
