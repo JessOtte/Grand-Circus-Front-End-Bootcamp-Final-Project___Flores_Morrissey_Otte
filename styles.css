@@ -15,6 +15,11 @@
   .back-btn-img {
   width: 15%;
   }
+
+  .forecast.ng-scrope:nth-child(even) {
+    color:white; 
+  }
+
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -41,6 +46,8 @@ margin-top: 10px;
 .back-btn-img {
   width: 6%;
 }
+
+
 }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -98,7 +105,8 @@ margin-top: 10px;
     
     display: flex;
     flex-direction: column;
-  justify-content: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
    }
 
    #box2 {
