@@ -1,5 +1,5 @@
 /* Extra extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 764px) {
 
   #event-top {
     margin: 13vh 0 3vh 0;
@@ -7,14 +7,14 @@
 
   .event-details-body h3 {
     margin-top: 45px;
-}
+  }
 
-.go-back-btn-container {
+  .go-back-btn-container {
   top: 15vh;
-}
-.back-btn-img {
+  }
+  .back-btn-img {
   width: 15%;
-}
+  }
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -40,9 +40,7 @@ margin-top: 10px;
 }
 .back-btn-img {
   width: 6%;
-
 }
-
 }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -57,7 +55,6 @@ margin-top: 10px;
   background: #3AAFA9;
   background-clip: border-box;  
   width: 100vw;
-  /* height: 60%; */
   position: absolute;
   top: 0;
   z-index: -1;
@@ -174,7 +171,7 @@ html, body {
     width: 100vw;
     }
 
-/* basic link setup. */
+/******************************************************* basic link setup. *****************************************************************/
 a {
   text-decoration: none !important;
   color: white !important;
@@ -250,19 +247,19 @@ h5 {
     font-size: 30px;
     text-transform: capitalize;
 }
-
 .weather-container {
   width: 100vw;
-  /* text-align: center; */
   color: #fff;
   background-color: #3AAFA9;
+<<<<<<< HEAD
+=======
   /* background-image: url(images/Grand-Rapids.jpg);
   background-size: cover;
   background-repeat: no-repeat; */
   /* top: 2vh; */
+>>>>>>> b43f3861bed05aa4309599aa5ed737de72b082e0
   margin-top: -3%;
   display: flex;
-  /* flex-direction: column; */
   flex-grow: inherit;
   margin-top: 7vh;
   padding-left: 20px;
@@ -273,9 +270,6 @@ h5 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* margin-top: 15vh; */
-  /* margin-left: 20px; */
-  /* flex: 5; */
 }
 .temp-info {
   display: flex;
@@ -286,13 +280,10 @@ h5 {
   font-size: 12px;
   color: white;
   display: flex;
-  /* justify-content: center; */
 }
 .app-info-text {
   display: flex;
   flex-direction: column;
-  /* align-content: center; */
-  /* justify-content: center; */
   margin-left: 50px;
   margin-top: 2%;
 }
@@ -600,10 +591,9 @@ h5 {
 }
 
  #event-list-logo {
-    height: 30vh;
-    width: 20vw;
-    /* object-fit: contain; */
-  }
+  object-fit: cover;
+  width: 23vw;
+  height: 25.7vh;  }
 
 
 a.control_prev, a.control_next {
@@ -662,10 +652,14 @@ a.control_next {
   text-align: center;
 }
 .event-list-name {
-  width: 90%;
+  width: 80%;
   text-align: center;
+  font-size: 1.5em;
 }
 
+.event-list-name p:focus {
+font-size: 1em;
+}
  /* SLIDER STYLING */
 
  .slider-frame {
