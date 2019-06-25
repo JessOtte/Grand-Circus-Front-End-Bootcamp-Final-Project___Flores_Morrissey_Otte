@@ -15,6 +15,11 @@
   .back-btn-img {
   width: 15%;
   }
+
+  .forecast.ng-scrope:nth-child(even) {
+    color:white; 
+  }
+
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -41,6 +46,8 @@ margin-top: 10px;
 .back-btn-img {
   width: 6%;
 }
+
+
 }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -98,7 +105,8 @@ margin-top: 10px;
     
     display: flex;
     flex-direction: column;
-  justify-content: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
    }
 
    #box2 {
@@ -127,7 +135,6 @@ margin-top: 10px;
 .description {
   display: flex;
   justify-content: center;
-  padding-top: 30px;
 }
 
 .temp-info {
@@ -198,7 +205,8 @@ a:visited {
 }
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  /* justify-content: space-between; */
   background-color:#17252A;
   padding: 5px 20px;
   position: fixed;
@@ -218,7 +226,8 @@ a:visited {
     text-align: center;
     align-items: center;
     align-content: center;
-    font-family: 'Pacifico'; 
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
 
 .nav-items {
@@ -238,8 +247,8 @@ a:visited {
 }
 
 .data {
-    color: white;
-    font-size: 8vh;
+  font-size: 15vh;
+  font-weight: 900;
   }
 
 h5 {
@@ -251,17 +260,12 @@ h5 {
   width: 100vw;
   color: #fff;
   background-color: #3AAFA9;
-  /* background-image: url(images/Grand-Rapids.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; */
-  /* top: 2vh; */
-  margin-top: -3%;
+  margin-top: 21vh;
   display: flex;
-  flex-grow: inherit;
-  margin-top: 7vh;
-  padding-left: 20px;
+  padding: 20px;
   height: 100%;
-  margin-bottom: 50px;
+  flex-direction: column;
+  text-align: center;
 }
 .description {
   display: flex;
@@ -277,23 +281,23 @@ h5 {
   font-size: 12px;
   color: white;
   display: flex;
+  justify-content: center;
 }
 .app-info-text {
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   margin-top: 2%;
 }
 .welcome-message-title {
   color: #17252A;
-  font-size: 8vh;
+  font-size: 4vh;
   -webkit-text-stroke: 2px;
   letter-spacing: 2px;
   line-height: 100%;
-  width: 95%
+  font-weight: 900;
 }
 .welcome-message-paragraph {
-  width: 90%;
   line-height: 18px;
   margin-top: 20px;
 }
@@ -316,7 +320,8 @@ h5 {
     color: darkred;
 }
 #weather-conditions {
-    font-size: 20px;
+    font-size: 5vh;
+    margin-top: -5vh;
 }
 .forecast {
   color: white;
