@@ -20,30 +20,33 @@ EventService.fetchWeather(id)
 
 };
 
+
+
+
 //   <div ng-repeat = "item in $ctrl.weatherData.list">{{item.weather['0']}}</div>
 {/* <div><img ng-src = "http://openweathermap.org/img/w/{{$ctrl.weatherData.list[0].weather[0].icon}}.png" class = "icon"></img> */}
 
 angular.module('WeatherEventApp')
   .component('weatherForecast', {
     template: `
-    <div class="nav-container">
 
     <div class="logo">
-      <a id="show" class="logo" href="#!/weather-list"><img src="./images/weather-brite-gr-logo.png" alt="WeatherBrite GR Logo"></a>
+      <a href="#!/weather-list"><img id="logo" src="./images/weather-brite-gr-logo.png" alt="WeatherBrite GR Logo"></a>
     </div>
 
-    <div  class="extended">
-    <span class = "forecast"> Extended Forescast: </span>
-    
-   <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">
-    <div>{{ (item.dt *  1000) | date:'shortTime'}}</div>
-    <div>{{item.main.temp | number:0}} ℉</div>
 
+    <div  class="extended">
+    <div class = "forecast-title"> Extended Forescast: </div>
+
+<div class="forecast-result-container">
+    <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">
+    <div>{{ (item.dt *  1000) | date:'shortTime'}}</div>
+    <div>{{item.main.temp | number:0}}°</div>
+</div>
 
    </div>
   </div>
 
-    </div>
 
 
 
