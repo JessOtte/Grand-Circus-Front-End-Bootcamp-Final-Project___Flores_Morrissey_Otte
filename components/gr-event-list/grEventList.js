@@ -322,7 +322,7 @@ weather: "",
             rank: "30",
             googleReview: "4.6",
             summary: "Enjoy, explore, and learn in nature",
-            description: "We lease 143 acres from the City of Grand Rapids and own 121 acres to use both the land and wildlife as the perfect backdrop to provide experiences that engage people to actively use and interact with our environment, our heritage and our connection to natural systems, as well as empower people to embrace nature, new perspectives, and sustainable practices.",
+            description: "143 acres of parks and wildlife to explore.",
             img: "https://townsquare.media/site/45/files/2017/05/blandford-nature-center-fairey-homes.jpg?w=980&q=75",
 website: "https://blandfordnaturecenter.org/",
 weather: "",
@@ -563,7 +563,7 @@ angular.module('WeatherEventApp')
 <div class="gr-event-list-container">
 
 <div class ="gr-event-list-title-container">
-  <h1 class="meet-the-team-title">Top 50 Things to Do in Grand Rapids</h1>
+  <h1 class="meet-the-team-title">Grand Rapids Top 50</h1>
   <p class="meet-the-team-paragraph">Rain or shine, these activities will give you something to do.</p>
 </div>
 

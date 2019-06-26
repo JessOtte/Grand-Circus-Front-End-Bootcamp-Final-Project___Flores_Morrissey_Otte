@@ -505,11 +505,17 @@ h5 {
   line-height: 20px;
   margin-bottom: 20px;
   text-align: justify;
+  margin-top: 12vh;
+}
+
+.About-Event {
+  margin-top: 3vh;
 }
 
 
 .event-details-img {
   border: solid #17252A 20px;
+  padding-top: 12vh;
 
 }
 
@@ -806,6 +812,7 @@ img.slider-img {
   line-height: 100%;
   width: 95%;
   font-weight: 900;
+  padding-top: 12vh;
 }
 .meet-the-team-paragraph {
   width: 90%;
@@ -824,6 +831,7 @@ img.slider-img {
   padding: 20px;
   background-color: #3AAFA9;
   text-align: center;
+  /* font-size: 15vh; */
 }
 .gr-event-list-container {
   display: flex;
@@ -922,6 +930,7 @@ margin-top: 10px;
 
   .event-details-img {
     margin-left: 60px;
+    padding-top: 12vh;
   }
 
 #event-details-colored-box {
@@ -1005,6 +1014,12 @@ margin-top: 10px;
   font-size: 12px; 
   padding-left: 15px;
 }
+
+.event-details-img {
+  margin-left: 90px;
+  padding-top: 12vh;
+}
+
 } 
 
 @media only screen and (min-width: 768px) {

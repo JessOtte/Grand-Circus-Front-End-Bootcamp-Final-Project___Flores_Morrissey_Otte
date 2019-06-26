@@ -79,7 +79,7 @@ angular.module('WeatherEventApp')
 </div>
 
 <div class="event-details-body">
-<h3 -webkit-text-stroke: .5px; style="text-align: center;">ABOUT THIS EVENT</h3>
+<h3 -webkit-text-stroke: .5px; style="text-align: center;" class = "About-Event" >ABOUT THIS EVENT</h3>
 <p class="event-details-paragraph">{{$ctrl.fullEvent.description.text}}</p>
 </div>
 
