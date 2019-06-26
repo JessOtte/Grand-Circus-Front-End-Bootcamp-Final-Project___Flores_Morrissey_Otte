@@ -244,7 +244,7 @@ h5 {
   background-color: #3AAFA9;
   margin-top: 22vh;
   display: flex;
-  padding: 20px;
+  padding: 20px 20px 20px 27px;
   height: 100%;
   flex-direction: column;
   text-align: center;
@@ -972,7 +972,6 @@ margin-top: 10px;
     display: flex;
     justify-content: center;
   }
-
 
 .description {
   display: flex;
