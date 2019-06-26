@@ -132,15 +132,15 @@ angular.module('WeatherEventApp')
 
 <div id="event-results">
 
-<div id="main-box">
+<div id="main-container">
 
-<div id="box2" ng-repeat="item in $ctrl.eventData.events | limitTo: $ctrl.eventLimit">
+<div id="event-list-container" ng-repeat="item in $ctrl.eventData.events | limitTo: $ctrl.eventLimit">
 
 <div class="event-img-container">
 <img id="event-list-logo" ng-src= "{{item.logo.original.url}}">
-</div>
-<dic class="event-card-info">
 <h3 class="event-list-name">{{item.name.text}}</h3>
+</div>
+<div class="event-card-info">
 <p class="event-list-venue">{{item.venue.name}}</p>
 
 <p class="event-list-date-time"><strong>Starts:</strong> {{item.start.local  | date:'shortTime'}}

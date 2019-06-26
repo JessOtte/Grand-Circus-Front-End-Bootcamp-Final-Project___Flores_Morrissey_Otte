@@ -244,7 +244,7 @@ h5 {
   background-color: #3AAFA9;
   margin-top: 22vh;
   display: flex;
-  padding: 20px;
+  padding: 20px 20px 20px 27px;
   height: 100%;
   flex-direction: column;
   text-align: center;
@@ -539,7 +539,7 @@ h5 {
 }
 
 /* EVENT-LIST STYLING */
-#main-box {
+#main-container {
  display: flex;
  flex-direction: row;
  flex-wrap:wrap;
@@ -561,7 +561,7 @@ h5 {
 }
 
 
-#box2 {
+#event-list-container {
   display: flex;
   /* flex-direction: column; */
   /* justify-content: center; */
@@ -584,7 +584,7 @@ h5 {
   font-size: 13px;
 }
 
-#box2:hover {
+#event-list-container:hover {
    -webkit-box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.50);
   -moz-box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.50);
   box-shadow: inset 0px 0px 12px -3px rgba(0,0,0,0.50);
@@ -592,7 +592,7 @@ h5 {
 
 #event-list-logo {
   object-fit: cover;
-  width: 53vw;
+  width: 47vw;
   height: 25.7vh;
 }
 .event-list-free {
@@ -648,6 +648,7 @@ a.control_next {
   letter-spacing: 1px;
   top: 6%;
   line-height: 1.5vh;
+  width: 100%;
 }
 .bottom-summary {
   position: absolute;
@@ -658,23 +659,30 @@ a.control_next {
   font-size: 1.5vh;
   bottom: -1.5vh;
   line-height: 1.8vh;
+  width: 100%;
 }
 .gr-events-title {
   font-size: 20px;
   text-align: center;
 }
+.event-img-container {
+  width: 100%;
+}
 .event-card-info {
-  margin-left: 20px;
+  margin-bottom: 14px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  margin-left: -12%;
+  /* align-items: center; */
 }
 .event-list-name {
   /* width: 100%; */
-  /* text-align: center; */
-  font-size: 2.5vh;
+  text-align: center;
+  font-size: 80%;
   font-weight: 900;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  width: 71%;
 }
 .event-list-venue {
   font-size: 1.7vh;
@@ -932,6 +940,24 @@ margin-top: 10px;
 
 }
 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+
+
+
 @media (min-width: 320px) and (max-width: 480px) {
 
 
@@ -946,11 +972,6 @@ margin-top: 10px;
     display: flex;
     justify-content: center;
   }
-
-
-.data {
-  font-size: 19px;
-}
 
 .description {
   display: flex;
@@ -981,12 +1002,204 @@ margin-top: 10px;
 
     justify-content: center;
 }
-#box2 {
+
+.meet-the-team-container {
+  flex-direction: row;
+}
+#event-list-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 43px;
+  padding: 10px;
+  width: 100%;
+  width: 300px;
+  height: auto;
+  text-align: center;
   justify-content: center;
   width: 75%;
+}
+.event-img-container {
+  width: 100%;
+  width: 300px;
+}
+#event-list-logo {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+}
+.event-card-info {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0;
+  width: 300px;
+  text-align: left;
+}
+.event-list-name {
+  width: 100%;
+  font-size: 2vh;
+}
+.event-list-venue {
+  font-size: 1.7vh;
+  line-height: initial;
+  margin-bottom: 19px;
+  text-align: center;
+}
+.event-list-date-time {
+  font-size: 1.5vh;
+  line-height: 2vh;
+  margin: 0;
+}
+.event-list-free {
+  font-size: 1.5vh;
+  line-height: 2vh;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...}  */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #logo {
+    width: 20vw;
+  }
+  .forecast-result-container {
+
+    justify-content: center;
 }
 .meet-the-team-container {
   flex-direction: row;
 }
+#event-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 43px;
+  padding: 10px;
+  width: 100%;
+  width: 300px;
+  height: auto;
+  text-align: center;
+}
+.event-img-container {
+  width: 100%;
+  width: 300px;
+}
+#event-list-logo {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+}
+.event-card-info {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0;
+  width: 300px;
+  text-align: left;
+}
+.event-list-name {
+  width: 100%;
+  font-size: 2vh;
+}
+.event-list-venue {
+  font-size: 1.7vh;
+  line-height: initial;
+  margin-bottom: 19px;
+  text-align: center;
+}
+.event-list-date-time {
+  font-size: 1.5vh;
+  line-height: 2vh;
+  margin: 0;
+}
+.event-list-free {
+  font-size: 1.5vh;
+  line-height: 2vh;
+}
+  .weather-container {
+    width: 100vw;
+    color: #fff;
+    background-color: rgba(350,350, 350,.3);
+    margin-top: 276vh;
+    display: flex;
+    padding: 20px;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .data {
+    text-shadow: 7px 4px 5px black;
+  }
+  #weather-conditions {
+    font-size: 3vh;
+    margin-top: -3vh;
+    font-weight: 100;
+    text-shadow: 2px 3px 3px black;
+  }
+  .welcome-message-title {
+    color: white;
+    font-size: 6vh;
+    -webkit-text-stroke: 2px;
+    letter-spacing: 4px;
+    line-height: 7vh;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 7px 4px 5px black;
+    padding: 20px;
+    /* width: 75%; */
+    /* align-content: center; */
+  }
+  .welcome-message-paragraph {
+    color: #17252A;
+    line-height: 18px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 3.6vh;
+    background-color: white .5px;
+    background-color: rgba(350,350, 350,0.7);
+    padding: 20px;
+    border-radius: 13px;
+  }
+ 
+  
+  
+  .hero{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    background-image:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.2)),url("./images/Grand-Rapids.jpg");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed}
+    .hero h1{
+      font-size:5em;
+      margin-top:0;
+      margin-bottom:.5em
+    }
+    /* .hero .btn{
+      display:block;
+      width:200px;
+      padding:1em;
+      margin-top:50px;
+      margin-left:auto;
+      margin-right:auto;
+      color:#fff;
+      text-decoration:none;
+      font-size:1.5em;
+      border:3px solid #fff;
+      border-radius:20px;
+      background-color:rgba(147,112,219,.8)
+    } */
+  
 }
