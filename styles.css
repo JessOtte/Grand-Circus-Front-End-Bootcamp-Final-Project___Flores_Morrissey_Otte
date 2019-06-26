@@ -308,15 +308,9 @@ h5 {
     color: darkred;
 }
 #weather-conditions {
-<<<<<<< HEAD
-    font-size: 5vh;
-    margin-top: -5vh;
-    padding-top: 5vh;
-=======
   font-size: 3vh;
   margin-top: -3vh;
   font-weight: 100;
->>>>>>> b3b29ce8cf8642548c5adec9b1f9c5bbe7baefc2
 }
 .forecast {
   color: white;
