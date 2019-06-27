@@ -3,8 +3,6 @@ function GrEvents(EventService, $q, $scope) {
 	
 
 
-	
-
       
 	    
   
@@ -269,7 +267,7 @@ ctrl.$onChanges = (changesObj) => {
       template: `
   
 <div id="gr-events">
-<h4 id="rec-events-title" class="welcome-message-title">Since the current conditions are {{$ctrl.weatherData.weather["0"].description}}, we recommend the following activities for your journey today.</h4>
+<h4 id="rec-events-title" class="welcome-message-title">Based on the current conditions, we recommend the following activities for your journey today.</h4>
 
 <div class="slider-frame">
 
