@@ -10,11 +10,11 @@ function EventList(EventService, $q) {
   ctrl.eventCategories = [];
   ctrl.priceSelection = null;
   
-   ctrl.eventLimit = 9; 
+   ctrl.eventLimit = 6; 
   ctrl.selectedCategory = "";
 
   ctrl.seeMore =() =>{ 
-    ctrl.eventLimit += 9;
+    ctrl.eventLimit += 6;
         };
 
   ctrl.selectCategory = function(category) {
@@ -79,17 +79,6 @@ ctrl.selectPrice = function(price) {
           ctrl.eventCategories = response; 
           console.log(response);
       });
-    
-      // ctrl.fetchEvents = () => {
-      //   return $q(function(resolve, reject) {
-      //     // Call service, then set our data
-      //     EventService.fetchCategories()
-      //     .then ( (response) => {
-      //       console.log(response);
-      
-      //           })
-      //      });
-      //     }
 
       ctrl.callEventDetails = (event) => {
         console.log('I am fetching the event THE USER selected ==>', event);
@@ -113,14 +102,14 @@ angular.module('WeatherEventApp')
 
 
   <div class="filter-category">
-  <select   ng-model="selectedCategory" ng-change= "$ctrl.selectCategory(selectedCategory)" class="custom-select" style="width:9vw; height:6vh; color:white; background-color:#2E4057; border:none; font-size:0.9em;">
+  <select   ng-model="selectedCategory" ng-change= "$ctrl.selectCategory(selectedCategory)" class="custom-select" style="width:13vw; height:6vh; color:white; background-color:#2E4057;  font-size:0.9em;">
     <option value="" selected="selected">Category</option>
     <option ng-repeat="item in $ctrl.eventCategories.categories" value="{{item.id}}">{{item.name}}</option>
   </select>
 </div>
 
   <div class="filter-category">
-    <select ng-model="priceSelection" class="custom-select" ng-change="$ctrl.selectPrice(priceSelection)" style="width:9vw; height:6vh; color:white; background-color:#2E4057; border:none; font-size:0.9em;">
+    <select ng-model="priceSelection" class="custom-select" ng-change="$ctrl.selectPrice(priceSelection)" style="width:13vw; height:6vh; color:white; background-color:#2E4057;  font-size:0.9em;">
       <option value="" selected="selected">Price</option>  
       <option value="free" selected="free">Free Events</option>
       <option value="paid" selected="paid">Paid Events</option>

@@ -36,16 +36,12 @@ window.onload = function() {
   document.getElementById('current-time').innerHTML =     hour+':'+min+':'+sec +' '+mid ;
     setTimeout(clock, 1000);
     }
+  }
 }
-
-}
-
 
 angular.module('WeatherEventApp')
   .component('weatherList', {
     template: `
-
-
     <div class="hero">
     <div class="hero-inner">
 

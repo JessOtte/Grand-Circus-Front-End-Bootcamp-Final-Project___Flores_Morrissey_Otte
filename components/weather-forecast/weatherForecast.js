@@ -9,9 +9,7 @@ console.log(true);
 
    console.log(ctrl.weatherData);
 
-}
-
-)
+})
 
 EventService.fetchWeather(id)
 .then((response) => {
@@ -19,10 +17,6 @@ EventService.fetchWeather(id)
 });
 
 };
-
-
-
-
 //   <div ng-repeat = "item in $ctrl.weatherData.list">{{item.weather['0']}}</div>
 {/* <div><img ng-src = "http://openweathermap.org/img/w/{{$ctrl.weatherData.list[0].weather[0].icon}}.png" class = "icon"></img> */}
 
@@ -47,12 +41,7 @@ angular.module('WeatherEventApp')
    </div>
   </div>
 
-
-
-
-
-
-`, // or use templateUrl
+`,
     controller: WeatherForecast,
 
 

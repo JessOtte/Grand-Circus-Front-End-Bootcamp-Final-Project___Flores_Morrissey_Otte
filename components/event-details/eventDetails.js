@@ -7,25 +7,6 @@ function EventDetails(EventService, $q) {
   ctrl.fullEvent = null;
   ctrl.fullEvent = EventService.getDetails();
 
-
-  //  EventService.getMeetupEvents()
-  //  .then((response) => {
-  //      ctrl.meetupData = response;
-
-  //      console.log(ctrl.meetupData);
-   
-  //  });
-
-
-  // EventService.fetchEvents()
-  // .then((response) => {
-  //     ctrl.eventData = response;
-  //     ctrl.fullEvent = EventService.getDetails();
-  //   console.log('Logging all the events today ==>', ctrl.eventData);
-    
-  
-  // });
-
   ctrl.fetchEvents = () => {
     return $q(function(resolve, reject) {
       // Call service, then set our data

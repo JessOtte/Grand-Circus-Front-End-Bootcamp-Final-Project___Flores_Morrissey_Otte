@@ -1,16 +1,5 @@
 function GrEvents(EventService, $q, $scope) {
 	const ctrl = this;
-	
-
-
-      
-	    
-  
-  
-  
-
-
-  
   
 var scaling = 1.50;
 // count
