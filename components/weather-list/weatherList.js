@@ -73,7 +73,7 @@ angular.module('WeatherEventApp')
 
 
         <div class="app-info-text">
-          <h3 class="welcome-message-title">Some days you have to create your own sunshine</h3>
+          <h3 class="welcome-message-title">Come rain or shine, we've got you covered on things to do in Grand Rapids today</h3>
           
         </div>
      
