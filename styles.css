@@ -180,11 +180,23 @@ a:visited {
 #footer-container {
   bottom:0;
   width:100%;
-  height:20vh;   
+  height:32vh;
   background:#2b7478;
-  padding: 20px;
   z-index: 999;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: auto;
 }
+
+ #links {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+}
+
+
+
 .nav-container {
   display: flex;
   flex-direction: column;
@@ -879,10 +891,12 @@ img.slider-img {
 #footer-container {
   bottom:0;
   width:100%;
-  height:20vh;   /* Height of the footer */
+  height:32vh;
   background:#2b7478;
-  padding: 20px;
   z-index: 999;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: auto;
 }
 
 
@@ -891,7 +905,6 @@ img.slider-img {
 
   .hero {
     display: hide; 
-
   }
 
   #logo {
@@ -958,10 +971,12 @@ img.slider-img {
 #footer-container {
   bottom:0;
   width:100%;
-  height:20vh;   /* Height of the footer */
+  height:35vh;
   background:#2b7478;
-  padding: 20px;
   z-index: 999;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: auto;
 }
 
 }
@@ -1143,12 +1158,12 @@ img.slider-img {
     #footer-container {
       bottom:0;
       width:100%;
-      height:6vh;
+      height:36vh;
       background:#2b7478;
       z-index: 999;
-      
-      display: flex;
-      justify-content: space-between;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin: auto;
     }
 
     
