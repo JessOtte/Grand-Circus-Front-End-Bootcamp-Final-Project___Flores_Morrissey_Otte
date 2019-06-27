@@ -10,11 +10,11 @@ function EventList(EventService, $q) {
   ctrl.eventCategories = [];
   ctrl.priceSelection = null;
   
-   ctrl.eventLimit = 9; 
+   ctrl.eventLimit = 6; 
   ctrl.selectedCategory = "";
 
   ctrl.seeMore =() =>{ 
-    ctrl.eventLimit += 9;
+    ctrl.eventLimit += 6;
         };
 
   ctrl.selectCategory = function(category) {
