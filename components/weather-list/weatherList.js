@@ -74,13 +74,7 @@ angular.module('WeatherEventApp')
 
         <div class="app-info-text">
           <h3 class="welcome-message-title">Some days you have to create your own sunshine</h3>
-          <p class="welcome-message-paragraph">
           
-          If you're new in town, just passing through or call yourself 
-          a local, we have recommended activities based on the weather to help you venture out into 
-          Grand Rapids today...
-          </p>
-          <br>
         </div>
      
         </div>

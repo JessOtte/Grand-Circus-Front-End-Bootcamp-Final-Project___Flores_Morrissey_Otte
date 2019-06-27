@@ -30,7 +30,8 @@ angular.module('WeatherEventApp')
 
 
     <div  class="extended">
-    <div class = "forecast-title"> Extended Forescast: </div>
+
+    <div class = "forecast-title"> Extended Forescast for Grand Rapids - MI </div>
 
 <div class="forecast-result-container">
     <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">

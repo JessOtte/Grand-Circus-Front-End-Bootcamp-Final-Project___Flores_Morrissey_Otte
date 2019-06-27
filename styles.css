@@ -263,7 +263,7 @@ h5 {
   width: 100vw;
   color: #fff;
   background-color: #3AAFA9;
-  margin-top: 22vh;
+  margin-top: 28vh;
   display: flex;
   padding: 20px 20px 20px 27px;
   height: 100%;
@@ -345,6 +345,7 @@ h5 {
 }
 .forecast-title {
   color: white;
+  margin-top: 20px;
 }
 .forecast-result-container {
   display: flex;
@@ -1009,11 +1010,26 @@ img.slider-img {
     left: 1vw;
 }
   #logo {
-    width: 14vw;
-}
+    width: 12vw;
+    top: 3vh;
+  }
 .extended {
-  margin-top: 2vh;
+  margin-top: -4vh;
+  align-items: center;
 }
+.forecast-title {
+  color: white;
+  font-weight: 600;
+  /* border-bottom: 1px solid white; */
+  /* width: 25%; */
+  border-bottom: 2px white solid;
+  /* background-color: white; */
+  width: 30%;
+  margin-bottom: 5px;
+  
+}
+
+
   .forecast-result-container {
 
     justify-content: center;
@@ -1024,6 +1040,9 @@ img.slider-img {
 .filter-title {
   text-align: center;
   padding: 20px;
+}
+.card-body {
+  margin: 21px 0;
 }
 #event-list-container {
   display: flex;

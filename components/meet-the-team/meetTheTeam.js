@@ -32,7 +32,7 @@ angular.module('WeatherEventApp')
 <img class="card-img-top" src="./images/will-morrissey.jpg" alt="Jessica Otte">
 <div class="card-body">
   <h5 class="card-title">Will Morrissey</h5>
-  <p class="card-text">Front-End Web Developer Student</p>
+  <p class="card-text">Front-End Web Developer || UX Enthusiast</p>
   <a href="https://www.linkedin.com/in/will-morrissey/" target="_" class="btn btn-primary">Let's Connect</a>
 </div>
 </div>
