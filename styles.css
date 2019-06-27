@@ -1002,6 +1002,10 @@ img.slider-img {
 .meet-the-team-container {
   flex-direction: row;
 }
+.filter-title {
+  text-align: center;
+  padding: 20px;
+}
 #event-list-container {
   display: flex;
   flex-direction: column;
@@ -1030,6 +1034,7 @@ img.slider-img {
   margin-left: 0;
   width: 300px;
   text-align: left;
+  padding: 20px;
 }
 .event-list-name {
   width: 100%;
@@ -1105,9 +1110,9 @@ img.slider-img {
     align-items: center;
 }
 #rec-events-title {
-  font-size: 4vh;
+  font-size: 3vh;
   line-height: 4vh;
-  font-weight: 500;
+  font-weight: 100;
   background-color: #17252A;
   width: 100%;
   text-align: center;
@@ -1115,6 +1120,8 @@ img.slider-img {
   margin-bottom: -20px;
   width: 75%;
   text-transform: inherit;
+  text-shadow: none;
+  line-height: 3vh;
 }
 #gr-events {
   padding-top: 0px;
