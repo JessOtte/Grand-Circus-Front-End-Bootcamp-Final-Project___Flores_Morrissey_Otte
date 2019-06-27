@@ -371,12 +371,14 @@ h5 {
 }
 
 #box {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-top: 9vh;
 }
 
 /* BUTTON STYLING*/
@@ -464,6 +466,14 @@ h5 {
     box-shadow: 0 0 0 0.2rem rgba(23, 37, 42, 0.5);
   }
 /* EVENT-DETAILS STYLING */
+.back-btn-img {
+  width: 19vw;
+  margin-top: 4vh;
+}
+p {
+  /* margin-top: 0; */
+  margin-bottom: 1vh;
+}
 
 .card-img-top {
   width: 100%;
@@ -497,6 +507,7 @@ h5 {
   flex-direction: column;
   align-content: center;
   padding-top: 175px;
+  align-items: center;
 }
 
 #text-center {
@@ -517,6 +528,8 @@ h5 {
   margin: 0 10px 20px 0;
   -webkit-text-stroke: 2px;
   letter-spacing: 1px;
+  width: 100%;
+  margin-top: 2vh;
 }
 
 .event-details-paragraph {
@@ -534,6 +547,7 @@ h5 {
 
 .event-details-img {
   border: solid #17252A 20px;
+  width: 90vw;
 
 }
 
@@ -548,10 +562,12 @@ h5 {
   /* width: 55vw; */
   height: 20vh;
   font-size: 20px;
+  margin-left:0;
 }
 
 .event-details-body {
   width: 100%;
+  margin-top: 9vh;
 }
 
 #see-more {
@@ -572,6 +588,7 @@ h5 {
 .event-details-date-time {
   font-size: 14px;
   color: #17252A;
+  margin-bottom: 1vh;
 
 }
 
@@ -828,14 +845,15 @@ img.slider-img {
   -webkit-text-stroke: 2px;
   letter-spacing: 2px;
   line-height: 100%;
-  width: 95%;
+  /* width: 95%; */
   font-weight: 900;
-  padding-top: 12vh;
+  padding-top: 15vh;
 }
 .meet-the-team-paragraph {
-  width: 90%;
+  /* width: 90%; */
   line-height: 18px;
   margin-top: 20px;
+  color: white;
 }
 .card-title {
   color: #17252A;
@@ -878,12 +896,13 @@ img.slider-img {
 #gr-event-list-colored-box {
   padding: 20vh;
   background: #3AAFA9;
-  background-clip: border-box;  
+  background-clip: border-box;
   width: 100vw;
   /* height: 60%; */
   position: absolute;
   top: 0;
   z-index: -1;
+  margin-top: 14vh;
 }
 #event-button {
   margin-top: 15px;
@@ -1054,6 +1073,27 @@ img.slider-img {
 .event-list-free {
   font-size: 1.5vh;
   line-height: 2vh;
+}
+#event-list-btn {
+  font-size: 2vh;
+}
+.back-btn-img {
+  width: 8vw;
+  margin-top: -6vh;
+  margin-left: -1vw;
+}
+.center {
+  margin-left: 0;
+  margin-right: 0;
+}
+.event-details-city-and-start-date {
+  /* width: 55vw; */
+  height: 20vh;
+  font-size: 20px;
+  margin-left: 30px;
+}
+.event-details-title {
+  width: 75%;
 }
 .weather-container {
   width: 100vw;
