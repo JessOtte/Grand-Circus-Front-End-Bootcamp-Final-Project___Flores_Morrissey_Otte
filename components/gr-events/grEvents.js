@@ -259,8 +259,7 @@ ctrl.$onChanges = (changesObj) => {
 <!-- <h4 id="rec-events-title" class="welcome-message-title">Based on the current conditions, we recommend the following activities for your journey today.</h4> -->
 <p id="rec-events-title">
 	If you're new in town, just passing through or call yourself 
-	a local, we have recommended activities based on the weather to help you venture out into 
-	Grand Rapids today...
+	a local, we have recommended activities based on the weather to help you plan your day.
 
 		  </p> 
 		  
