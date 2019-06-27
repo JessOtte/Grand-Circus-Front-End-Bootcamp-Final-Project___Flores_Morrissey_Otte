@@ -46,14 +46,21 @@ angular.module('WeatherEventApp')
     template: `
 
 
+    <div class="hero">
+    <div class="hero-inner">
+
+    </div>
+</div>
 
 
-    <div>
+
+    <div id="event-list-colored-box"></div>
+      <div class="weather-container">
+
+      <div>
       <h1 id="current-time"></h1>
     </div>
     
-    <div id="event-list-colored-box"></div>
-      <div class="weather-container">
 
         <div class = "description">
         <h5 class="data">{{$ctrl.weatherData.main.temp | number:0}}°</h5>
@@ -72,15 +79,12 @@ angular.module('WeatherEventApp')
         <div class="app-info-text">
           <h3 class="welcome-message-title">Some days you have to create your own sunshine</h3>
           <p class="welcome-message-paragraph">
-          We often find ourselves dependent on the weather when looking for an activity 
-          in Grand Rapids, Michigan. 
-          <br>
-          So if you're new in town, just passing through or call yourself 
+          
+          If you're new in town, just passing through or call yourself 
           a local, we have recommended activities based on the weather to help you venture out into 
           Grand Rapids today...
           </p>
           <br>
-          <h4 id="rec-events-title" class="welcome-message-title">Since the current conditions are {{$ctrl.weatherData.weather["0"].description}}, we recommend the following activities for your journey today.</h4>
         </div>
      
         </div>

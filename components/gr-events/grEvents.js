@@ -269,7 +269,11 @@ ctrl.$onChanges = (changesObj) => {
       template: `
   
 <div id="gr-events">
+<h4 id="rec-events-title" class="welcome-message-title">Since the current conditions are {{$ctrl.weatherData.weather["0"].description}}, we recommend the following activities for your journey today.</h4>
+
 <div class="slider-frame">
+
+
 
 			<div class="button prev">
 				<i class="fa fa-chevron-left" aria-hidden="true"></i>

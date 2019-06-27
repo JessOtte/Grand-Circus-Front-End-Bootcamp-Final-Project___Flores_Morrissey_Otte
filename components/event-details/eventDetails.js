@@ -56,8 +56,7 @@ angular.module('WeatherEventApp')
     template: `
 <div id="event-details text-center" class="event-details-container">
 
-<div id="event-details-colored-box">
-</div>
+
 
 <div id="box">
 <img id="event-top" src="{{$ctrl.fullEvent.logo.original.url}}" alt="{{$ctrl.fullEvent.name.text}}" class="center event-details-img">

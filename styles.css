@@ -296,8 +296,14 @@ h5 {
 #rec-events-title {
   font-size: 2vh;
   line-height: initial;
-  font-weight: 500;
+  font-weight: 100;
+  color: white;
+  -webkit-text-stroke: 0px;
+  text-align: center;
+  text-transform: none;
+  width: 80%;
 }
+
 .weather-container h1{
   font-size:5em;
   margin-top:0;
@@ -478,6 +484,7 @@ h5 {
   display: flex;
   flex-direction: column;
   align-content: center;
+  padding-top: 175px;
 }
 
 #text-center {
@@ -505,17 +512,16 @@ h5 {
   line-height: 20px;
   margin-bottom: 20px;
   text-align: justify;
-  margin-top: 12vh;
+  /* margin-top: 12vh; */
 }
 
 .About-Event {
-  margin-top: 3vh;
+  margin-top: 4vh;
 }
 
 
 .event-details-img {
   border: solid #17252A 20px;
-  padding-top: 12vh;
 
 }
 
@@ -719,7 +725,7 @@ font-size: 1em;
  /* SLIDER STYLING */
 
  .slider-frame {
-  background-color: #3AAFA9;
+  background-color: #17252A;
   position: relative;
   margin: 0;
   overflow: hidden;
@@ -930,7 +936,6 @@ margin-top: 10px;
 
   .event-details-img {
     margin-left: 60px;
-    padding-top: 12vh;
   }
 
 #event-details-colored-box {
@@ -1017,12 +1022,17 @@ margin-top: 10px;
 
 .event-details-img {
   margin-left: 90px;
-  padding-top: 12vh;
 }
 
 } 
 
 @media only screen and (min-width: 768px) {
+
+  .hero {
+    display: hide; 
+
+  }
+
   #logo {
     width: 20vw;
   }
@@ -1158,17 +1168,17 @@ margin-top: 10px;
   font-size: 1.5vh;
   line-height: 2vh;
 }
-  .weather-container {
-    width: 100vw;
-    color: #fff;
-    background-color: rgba(350,350, 350,.3);
-    margin-top: 276vh;
-    display: flex;
-    padding: 20px;
-    height: 100%;
-    flex-direction: column;
-    text-align: center;
-  }
+.weather-container {
+  width: 100vw;
+  color: #fff;
+  background-color: rgba(350,350, 350,.3);
+  margin-top: -81vh;
+  display: flex;
+  padding: 20px;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+}
   .data {
     text-shadow: 7px 4px 5px black;
   }
@@ -1188,7 +1198,7 @@ margin-top: 10px;
     text-transform: uppercase;
     text-shadow: 7px 4px 5px black;
     padding: 20px;
-    /* width: 75%; */
+    width: 75%;
     /* align-content: center; */
   }
   .welcome-message-paragraph {
@@ -1202,9 +1212,28 @@ margin-top: 10px;
     background-color: rgba(350,350, 350,0.7);
     padding: 20px;
     border-radius: 13px;
+    width: 83%;
   }
- 
-  
+  .app-info-text {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 50px; */
+    margin-top: 2%;
+    align-items: center;
+}
+#rec-events-title {
+  font-size: 3vh;
+  line-height: initial;
+  font-weight: 500;
+  background-color: #17252A;
+  width: 100%;
+  text-align: center;
+  padding-top: 25px;
+  /* margin-bottom: -20px; */
+}
+.slider-frame {
+  background-color: #17252A;
+}
   
   .hero{
     width:100vw;
@@ -1246,5 +1275,6 @@ margin-top: 10px;
       padding: 20px;
       z-index: 999;
     }
+
     
 }
