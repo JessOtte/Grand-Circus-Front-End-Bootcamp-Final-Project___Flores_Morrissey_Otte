@@ -7,10 +7,11 @@ function MeetTheTeam() {
 angular.module('WeatherEventApp')
   .component('meetTheTeam', {
     template: `
+    <div id="team-top">x</div>
+    <br><br><br>
 
-    <div id="gr-event-list-colored-box"></div>
+    <div id="gr-event-list-colored-box" id="team-top"></div>
 
-<div class="meet-the-team" id="team-top">
 
 <div class ="meet-the-team-title-container">
   <h1 class="meet-the-team-title">Meet the Team</h1>

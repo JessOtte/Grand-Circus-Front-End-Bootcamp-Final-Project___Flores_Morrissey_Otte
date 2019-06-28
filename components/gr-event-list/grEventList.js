@@ -555,6 +555,7 @@ weather: "",
 angular.module('WeatherEventApp')
   .component('grEventList', {
     template: `
+    <div id="gr-top">x</div>
 
     <div id="gr-event-list-colored-box"></div>
 

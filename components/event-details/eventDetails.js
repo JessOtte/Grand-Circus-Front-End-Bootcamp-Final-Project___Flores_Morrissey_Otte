@@ -35,12 +35,13 @@ function EventDetails(EventService, $q) {
 angular.module('WeatherEventApp')
   .component('eventDetails', {
     template: `
+    <div id="event-top">x</div>
 <div id="event-details text-center" class="event-details-container">
 
 
 
 <div id="box">
-<img id="event-top" src="{{$ctrl.fullEvent.logo.original.url}}" alt="{{$ctrl.fullEvent.name.text}}" class="center event-details-img">
+<img  src="{{$ctrl.fullEvent.logo.original.url}}" alt="{{$ctrl.fullEvent.name.text}}" class="center event-details-img">
 
 <div class="event-details-city-and-start-date">
 <h3 class="event-details-title">{{$ctrl.fullEvent.name.text}}</h3>
