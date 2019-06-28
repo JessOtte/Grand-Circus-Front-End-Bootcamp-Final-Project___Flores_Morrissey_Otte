@@ -286,9 +286,12 @@ ctrl.$onChanges = (changesObj) => {
 							<p class="bottom-destination">{{item.destination}}</p>
 							<p class="bottom-summary">{{item.summary}}</p>			
 						</a>	
-					</div>
-			</div>
+                    </div>
+
+            </div>
+
 </div>
+<div id="view-more-link"><a href="#!/gr-event-list#gr-top">View More</a></div>
 
 
 </div>

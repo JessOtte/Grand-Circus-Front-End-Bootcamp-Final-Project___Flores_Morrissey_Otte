@@ -576,7 +576,7 @@ angular.module('WeatherEventApp')
     <img class="gr-events-card-img-top" ng-src="{{item.img}}" alt="{{item.destination}}">
     <h5 class="card-title">{{item.destination}}</h5>
     <p class="card-text">{{item.description}}</p>
-    <a id="event-btn" href="{{item.website}}" target="_blank" class="btn btn-primary">Take Me to Destination</a>
+    <a id="event-btn gr-btn" href="{{item.website}}" target="_blank" class="btn btn-primary">Take Me to Destination</a>
   </div>
     </a>	
     </div>

@@ -36,7 +36,7 @@ angular.module('WeatherEventApp')
 <div class="forecast-result-container">
     <div class = "forecast" ng-repeat="item in $ctrl.weatherData.list">
     <div>{{ (item.dt *  1000) | date:'shortTime'}}</div>
-    <div>{{item.main.temp | number:0}}°</div>
+    <div id="temp">{{item.main.temp | number:0}}°</div>
 </div>
 
    </div>
